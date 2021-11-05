@@ -5,3 +5,8 @@ export const theme = {
     background: `hsl(0, 0%, 100%)`,
   },
 }
+
+export const darkTheme = {
+  text: `${theme.colors.background}`,
+  body: `${theme.colors.text}`,
+}

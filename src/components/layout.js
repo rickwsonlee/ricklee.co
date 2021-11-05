@@ -8,13 +8,16 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import Header from "./header"
+import { darkTheme } from "../theme"
 
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${({ theme }) => theme.font};
+    color: ${({ theme }) => theme.text};
+    background: ${({ theme }) => theme.body};
   }
 `
 
@@ -31,14 +34,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle />
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      <ThemeProvider theme={darkTheme}>
+        <GlobalStyle />
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
+        </footer>
+      </ThemeProvider>
     </>
   )
 }

@@ -9,11 +9,14 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
-
 import Header from "./header"
 import { darkTheme } from "../theme"
+import { Reset } from "../reset"
 
 const GlobalStyle = createGlobalStyle`
+  // resest.js
+  ${Reset}
+
   body {
     font-family: ${({ theme }) => theme.font};
     color: ${({ theme }) => theme.text};

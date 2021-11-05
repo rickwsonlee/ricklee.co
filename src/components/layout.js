@@ -9,12 +9,14 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+
 import Header from "./header"
+import Footer from "./footer"
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
 
 const GlobalStyle = createGlobalStyle`
-  // resest.js
+  // reset.js
   ${Reset}
 
   body {
@@ -41,11 +43,7 @@ const Layout = ({ children }) => {
         <GlobalStyle />
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer />
       </ThemeProvider>
     </>
   )

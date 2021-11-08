@@ -1,17 +1,10 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 
 import Header from "./header"
 import Footer from "./footer"
+
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
 
@@ -21,17 +14,18 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: ${({ theme }) => theme.font};
+    line-height: 1.33;
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
   }
 `
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <Header siteTitle={title} />
+        <Header />
         <main>{children}</main>
         <Footer />
       </ThemeProvider>

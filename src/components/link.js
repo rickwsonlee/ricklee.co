@@ -6,15 +6,15 @@ import icon from "../assets/external-link.svg"
 const LinkAnimation = css`
   span {
     position: relative;
-    margin-right: ${props => (props.external ? `4px` : null)};
+    margin-right: ${props => (props.external ? `.3em` : null)};
 
     &:before {
       content: "";
-      position: absolute;
       display: block;
       width: 100%;
       height: 1px;
-      bottom: 0;
+      position: absolute;
+      bottom: -1px;
       left: 0;
       background-color: ${({ theme }) => theme.text};
       transform: ${props => (props.underlined ? `scaleX(1)` : `scaleX(0)`)};
@@ -31,10 +31,10 @@ const LinkAnimation = css`
     ${props =>
       props.external
         ? css`
-            width: 12px;
-            height: 12px;
-            display: inline-block;
             content: "";
+            display: inline-block;
+            width: 0.7em;
+            height: 0.7em;
             -webkit-mask: url(${icon}) no-repeat 50% 50%;
             mask: url(${icon}) no-repeat 50% 50%;
             -webkit-mask-size: cover;

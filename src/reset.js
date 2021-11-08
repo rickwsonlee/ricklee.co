@@ -21,6 +21,8 @@ export const Reset = css`
   blockquote,
   dl,
   dd {
+    font-size: inherit;
+    font-weight: inherit;
     margin: 0;
   }
 

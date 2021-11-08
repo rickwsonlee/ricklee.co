@@ -1,18 +1,20 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
-import { Grid, Col } from "./grid"
+import { Section, Grid, Col } from "./grid"
+import { AnimatedLink } from "./link"
 
 const Footer = () => {
   return (
-    <footer>
+    <Section as="footer" p="2rem">
       <Grid sm="2">
-        <Col>© {new Date().getFullYear()}</Col>
+        <Col span="2">© {new Date().getFullYear()}</Col>
         <Col>
-          <Link to="#top">Back to Top</Link>
+          <AnimatedLink to="#top">
+            <span>Back to Top</span>
+          </AnimatedLink>
         </Col>
       </Grid>
-    </footer>
+    </Section>
   )
 }
 

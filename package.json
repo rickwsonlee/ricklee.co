@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ricklee",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal website of Rick Lee",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rick Lee <hello@ricklee.co>",
   "dependencies": {
     "@fontsource/archivo": "^4.5.1",
     "babel-plugin-styled-components": "^1.13.3",
@@ -29,7 +29,8 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "homepage": "https://ricklee.co",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -41,9 +42,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/rickwsonlee/ricklee.co"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rickwsonlee/ricklee.co/issues"
   }
 }

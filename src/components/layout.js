@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 
@@ -7,6 +8,8 @@ import Footer from "./footer"
 
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
+
+import fontURL from "@fontsource/archivo/files/archivo-latin-400-normal.woff2"
 
 const GlobalStyle = createGlobalStyle`
   // reset.js
@@ -23,6 +26,15 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link
+          rel="preload"
+          as="font"
+          href={fontURL}
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+      </Helmet>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
         <Header />

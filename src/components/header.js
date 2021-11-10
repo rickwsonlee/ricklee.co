@@ -20,6 +20,7 @@ const Header = () => (
           <AnimatedAnchor
             href="//www.linkedin.com/in/rickwsonlee"
             target="_blank"
+            rel="noopener"
             underlined
             external
           >
@@ -30,6 +31,7 @@ const Header = () => (
         <Button
           href="https://1drv.ms/b/s!AjrODPFRPE3lgeJocXlxHbvZsRrmGw?e=wNqa7a"
           target="_blank"
+          rel="noopener"
         >
           View CV
         </Button>

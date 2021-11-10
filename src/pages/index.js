@@ -72,6 +72,7 @@ const IndexPage = ({ data }) => {
                     <AnimatedAnchor
                       href="//foggyou.com"
                       target="_blank"
+                        rel="noreferrer"
                       underlined
                       external
                     >
@@ -85,6 +86,7 @@ const IndexPage = ({ data }) => {
                     <AnimatedAnchor
                       href="//designsomething.co"
                       target="_blank"
+                        rel="noreferrer"
                       underlined
                       external
                     >
@@ -145,6 +147,7 @@ const IndexPage = ({ data }) => {
                   <AnimatedAnchor
                     href="//www.linkedin.com/in/rickwsonlee"
                     target="_blank"
+                    rel="noopener"
                     underlined
                     external
                   >
@@ -165,6 +168,7 @@ const IndexPage = ({ data }) => {
               <AnimatedAnchor
                 href="//github.com/rickwsonlee/ricklee.co"
                 target="_blank"
+                rel="noopener"
                 underlined
                 external
               >

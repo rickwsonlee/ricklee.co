@@ -1,6 +1,3 @@
-// Archivo font
-import "@fontsource/archivo"
-
 import * as React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "./src/theme"

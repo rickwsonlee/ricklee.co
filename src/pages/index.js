@@ -62,38 +62,42 @@ const IndexPage = ({ data }) => {
               <Header>Projects</Header>
               <List gap="1rem">
                 <li>
-                  <div>
-                    <p>Molecules</p>
+                  <dl>
+                    <dt>Molecules</dt>
                     <Label>Coming Soon</Label>
-                  </div>
+                  </dl>
                 </li>
                 <li>
-                  <div>
-                    <AnimatedAnchor
-                      href="//foggyou.com"
-                      target="_blank"
+                  <dl>
+                    <dt>
+                      <AnimatedAnchor
+                        href="//foggyou.com"
+                        target="_blank"
                         rel="noreferrer"
-                      underlined
-                      external
-                    >
-                      <span>Foggyou</span>
-                    </AnimatedAnchor>
+                        underlined
+                        external
+                      >
+                        <span>Foggyou</span>
+                      </AnimatedAnchor>
+                    </dt>
                     <Label>Web Development, 2021</Label>
-                  </div>
+                  </dl>
                 </li>
                 <li>
-                  <div>
-                    <AnimatedAnchor
-                      href="//designsomething.co"
-                      target="_blank"
+                  <dl>
+                    <dt>
+                      <AnimatedAnchor
+                        href="//designsomething.co"
+                        target="_blank"
                         rel="noreferrer"
-                      underlined
-                      external
-                    >
-                      <span>Artitude</span>
-                    </AnimatedAnchor>
+                        underlined
+                        external
+                      >
+                        <span>Artitude</span>
+                      </AnimatedAnchor>
+                    </dt>
                     <Label>Web Design &amp; Development, 2021</Label>
-                  </div>
+                  </dl>
                 </li>
               </List>
             </Section>

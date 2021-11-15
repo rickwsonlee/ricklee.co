@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   ${Reset}
 
   body {
-    font-family: "Archivo", sans-serif;
+    font-family: ${({ theme }) => theme.font};
     line-height: 1.33;
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};

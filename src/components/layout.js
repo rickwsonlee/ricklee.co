@@ -1,6 +1,9 @@
 import * as React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+
+import fontURL from "@fontsource/archivo/files/archivo-latin-400-normal.woff2"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -13,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   ${Reset}
 
   body {
-    font-family: ${({ theme }) => theme.font};
+    font-family: "Archivo", sans-serif;
     line-height: 1.33;
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
@@ -23,6 +26,15 @@ const GlobalStyle = createGlobalStyle`
 const Layout = ({ children }) => {
   return (
     <>
+      <Helmet>
+        <link
+          rel="preload"
+          as="font"
+          href={fontURL}
+          type="font/woff2"
+          crossorigin="anonymous"
+        />
+      </Helmet>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
         <Header />

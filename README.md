@@ -6,7 +6,7 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 - [ ] Fix to good ol' FOUT
 - [ ] Blog for portfolio content
-- [ ] Look into disabling the [displayName](https://styled-components.com/docs/tooling#better-debugging) option
+- [x] Look into disabling the [displayName](https://styled-components.com/docs/tooling#better-debugging) option
 
 ## Libraries
 
@@ -15,7 +15,7 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 ## Font
 
-- [Archivo](https://www.omnibus-type.com/fonts/archivo) by Ominibus-Type
+[Archivo](https://www.omnibus-type.com/fonts/archivo) by Ominibus-Type
 
 ## Author
 

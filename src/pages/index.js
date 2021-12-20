@@ -7,12 +7,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import { Section, Grid, Col } from "../components/grid"
-import { List } from "../components/list"
+import { ListHeader, List } from "../components/list"
 import { AnimatedLink, AnimatedAnchor } from "../components/link"
-
-const Header = styled.h3`
-  opacity: 0.5;
-`
 
 const Label = styled.dd`
   font-size: 14px;
@@ -34,7 +30,7 @@ const IndexPage = ({ data, location }) => {
         <Grid gap="2rem">
           <Col gap="2rem">
             <Section>
-              <Header>Specialisation</Header>
+              <ListHeader>Specialisation</ListHeader>
               <List>
                 <li>UI/UX</li>
                 <li>Interaction Design</li>
@@ -44,7 +40,7 @@ const IndexPage = ({ data, location }) => {
               </List>
             </Section>
             <Section>
-              <Header>Skills</Header>
+              <ListHeader>Skills</ListHeader>
               <List>
                 <li>User Research</li>
                 <li>Information Architecture</li>
@@ -60,7 +56,7 @@ const IndexPage = ({ data, location }) => {
               </List>
             </Section>
             <Section>
-              <Header>Education</Header>
+              <ListHeader>Education</ListHeader>
               <List gap="1rem">
                 <li>
                   <dl>
@@ -79,7 +75,7 @@ const IndexPage = ({ data, location }) => {
           </Col>
           <Col gap="2rem">
             <Section>
-              <Header>Experience</Header>
+              <ListHeader>Experience</ListHeader>
               <List gap="1rem">
                 <li>
                   <dl>
@@ -98,12 +94,12 @@ const IndexPage = ({ data, location }) => {
               </List>
             </Section>
             <Section>
-              <Header>Projects</Header>
+              <ListHeader>Projects</ListHeader>
               <List gap="1rem">
                 {posts.map(post => {
                   return (
-                <li>
-                  <dl>
+                    <li>
+                      <dl>
                         <dt>
                           <AnimatedLink
                             to={post.fields.slug}
@@ -114,8 +110,8 @@ const IndexPage = ({ data, location }) => {
                           </AnimatedLink>
                           <Label>{post.frontmatter.meta.year}</Label>
                         </dt>
-                  </dl>
-                </li>
+                      </dl>
+                    </li>
                   )
                 })}
                 <li>
@@ -137,7 +133,7 @@ const IndexPage = ({ data, location }) => {
               </List>
             </Section>
             <Section>
-              <Header>Contact</Header>
+              <ListHeader>Contact</ListHeader>
               <List gap="1rem">
                 <li>
                   <AnimatedAnchor href="mailto:hello@ricklee.co" underlined>

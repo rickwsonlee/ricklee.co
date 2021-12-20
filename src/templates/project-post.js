@@ -49,9 +49,9 @@ const BlogPostTemplate = ({ data, location }) => {
         <Section itemProp="articleBody">
           <MDXRenderer>{post.body}</MDXRenderer>
         </Section>
-        <footer>
+        {/* <footer>
           <Caption>Background by {post.frontmatter.background.author}</Caption>
-        </footer>
+        </footer> */}
       </Section>
     </Layout>
   )

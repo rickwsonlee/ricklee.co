@@ -7,6 +7,7 @@ export const Section = styled.div`
   flex-direction: ${props =>
     props.direction ? `${props.direction}` : `column`};
   gap: ${props => (props.gap ? `${props.gap}` : `1rem`)};
+  align-items: flex-start;
 `
 
 export const Grid = styled.div`

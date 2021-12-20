@@ -4,8 +4,8 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 ## Adding Next
 
-- [ ] Blog for portfolio content
-- [x] Fix to good ol' FOUT
+- [ ] Fix to good ol' FOUT
+- [x] Blog for portfolio content
 - [x] Look into disabling the [displayName](https://styled-components.com/docs/tooling#better-debugging) option
 
 ## Libraries

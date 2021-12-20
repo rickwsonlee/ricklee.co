@@ -2,6 +2,7 @@ import * as React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { MDXProvider } from "@mdx-js/react"
 
 import fontURL from "@fontsource/archivo/files/archivo-latin-400-normal.woff2"
 
@@ -10,6 +11,9 @@ import Footer from "./footer"
 
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
+import { Typography } from "../typography"
+import { Section, Grid, Col } from "./grid"
+import { AnimatedAnchor } from "./link"
 
 const GlobalStyle = createGlobalStyle`
   // reset.js
@@ -21,9 +25,14 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
   }
+
+  // Typography
+  ${Typography}
 `
 
-const Layout = ({ children }) => {
+const shortcodes = { Section, Grid, Col, AnimatedAnchor }
+
+const Layout = ({ children, location }) => {
   return (
     <>
       <Helmet>
@@ -37,8 +46,10 @@ const Layout = ({ children }) => {
       </Helmet>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <Header />
-        <main>{children}</main>
+        <Header location={location} />
+        <main>
+          <MDXProvider components={shortcodes}>{children}</MDXProvider>
+        </main>
         <Footer />
       </ThemeProvider>
     </>

@@ -7,24 +7,21 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import { Section, Grid, Col } from "../components/grid"
-import { List } from "../components/list"
-import { AnimatedAnchor } from "../components/link"
-
-const Header = styled.h3`
-  opacity: 0.5;
-`
+import { ListHeader, List } from "../components/list"
+import { AnimatedLink, AnimatedAnchor } from "../components/link"
 
 const Label = styled.dd`
   font-size: 14px;
   margin-top: 4px;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteDescription = data.site.siteMetadata?.description || `Description`
+  const posts = data.allMdx.nodes
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="Home" />
       <Helmet titleTemplate="">
         <title>{`${siteTitle} — ${siteDescription}`}</title>
@@ -33,7 +30,7 @@ const IndexPage = ({ data }) => {
         <Grid gap="2rem">
           <Col gap="2rem">
             <Section>
-              <Header>Specialisation</Header>
+              <ListHeader>Specialisation</ListHeader>
               <List>
                 <li>UI/UX</li>
                 <li>Interaction Design</li>
@@ -43,7 +40,7 @@ const IndexPage = ({ data }) => {
               </List>
             </Section>
             <Section>
-              <Header>Skills</Header>
+              <ListHeader>Skills</ListHeader>
               <List>
                 <li>User Research</li>
                 <li>Information Architecture</li>
@@ -59,44 +56,18 @@ const IndexPage = ({ data }) => {
               </List>
             </Section>
             <Section>
-              <Header>Projects</Header>
+              <ListHeader>Education</ListHeader>
               <List gap="1rem">
                 <li>
                   <dl>
-                    <dt>Molecules</dt>
-                    <Label>Coming Soon</Label>
+                    <dt>Google UX Design Professional Certificate</dt>
+                    <Label>Current</Label>
                   </dl>
                 </li>
                 <li>
                   <dl>
-                    <dt>
-                      <AnimatedAnchor
-                        href="//foggyou.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        underlined
-                        external
-                      >
-                        <span>Foggyou</span>
-                      </AnimatedAnchor>
-                    </dt>
-                    <Label>Web Development, 2021</Label>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>
-                      <AnimatedAnchor
-                        href="//designsomething.co"
-                        target="_blank"
-                        rel="noreferrer"
-                        underlined
-                        external
-                      >
-                        <span>Artitude</span>
-                      </AnimatedAnchor>
-                    </dt>
-                    <Label>Web Design &amp; Development, 2021</Label>
+                    <dt>Graduated in Engineering</dt>
+                    <Label>2015 &ndash; 2017</Label>
                   </dl>
                 </li>
               </List>
@@ -104,7 +75,7 @@ const IndexPage = ({ data }) => {
           </Col>
           <Col gap="2rem">
             <Section>
-              <Header>Experience</Header>
+              <ListHeader>Experience</ListHeader>
               <List gap="1rem">
                 <li>
                   <dl>
@@ -123,24 +94,46 @@ const IndexPage = ({ data }) => {
               </List>
             </Section>
             <Section>
-              <Header>Education</Header>
+              <ListHeader>Projects</ListHeader>
               <List gap="1rem">
+                {posts.map(post => {
+                  return (
+                    <li>
+                      <dl>
+                        <dt>
+                          <AnimatedLink
+                            to={post.fields.slug}
+                            itemProp="url"
+                            underlined
+                          >
+                            <span>{post.frontmatter.title}</span>
+                          </AnimatedLink>
+                          <Label>{post.frontmatter.meta.year}</Label>
+                        </dt>
+                      </dl>
+                    </li>
+                  )
+                })}
                 <li>
                   <dl>
-                    <dt>Google UX Design Professional Certificate</dt>
-                    <Label>Current</Label>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>Graduated in Engineering</dt>
-                    <Label>2015 &ndash; 2017</Label>
+                    <dt>
+                      <AnimatedAnchor
+                        href="//designsomething.co"
+                        target="_blank"
+                        rel="noreferrer"
+                        underlined
+                        external
+                      >
+                        <span>Artitude</span>
+                      </AnimatedAnchor>
+                      <Label>2021</Label>
+                    </dt>
                   </dl>
                 </li>
               </List>
             </Section>
             <Section>
-              <Header>Contact</Header>
+              <ListHeader>Contact</ListHeader>
               <List gap="1rem">
                 <li>
                   <AnimatedAnchor href="mailto:hello@ricklee.co" underlined>
@@ -195,6 +188,19 @@ export const siteQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMdx {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          meta {
+            year
+          }
+        }
       }
     }
   }

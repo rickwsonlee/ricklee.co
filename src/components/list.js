@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+export const ListHeader = styled.h3`
+  opacity: 0.5;
+`
+
 export const List = styled.ul`
   list-style: none;
   padding: 0;

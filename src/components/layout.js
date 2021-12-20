@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
 
 const shortcodes = { Section, Grid, Col, AnimatedAnchor }
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <>
       <Helmet>
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
       </Helmet>
       <ThemeProvider theme={darkTheme}>
         <GlobalStyle />
-        <Header />
+        <Header location={location} />
         <main>
           <MDXProvider components={shortcodes}>{children}</MDXProvider>
         </main>

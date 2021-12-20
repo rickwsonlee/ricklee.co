@@ -19,13 +19,13 @@ const Label = styled.dd`
   margin-top: 4px;
 `
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteDescription = data.site.siteMetadata?.description || `Description`
   const posts = data.allMdx.nodes
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="Home" />
       <Helmet titleTemplate="">
         <title>{`${siteTitle} — ${siteDescription}`}</title>

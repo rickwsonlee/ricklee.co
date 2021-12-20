@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 
 import { Section, Grid, Col } from "../components/grid"
 import { List } from "../components/list"
-import { AnimatedAnchor } from "../components/link"
+import { AnimatedLink, AnimatedAnchor } from "../components/link"
 
 const Header = styled.h3`
   opacity: 0.5;
@@ -22,6 +22,7 @@ const Label = styled.dd`
 const IndexPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteDescription = data.site.siteMetadata?.description || `Description`
+  const posts = data.allMdx.nodes
 
   return (
     <Layout>
@@ -59,44 +60,18 @@ const IndexPage = ({ data }) => {
               </List>
             </Section>
             <Section>
-              <Header>Projects</Header>
+              <Header>Education</Header>
               <List gap="1rem">
                 <li>
                   <dl>
-                    <dt>Molecules</dt>
-                    <Label>Coming Soon</Label>
+                    <dt>Google UX Design Professional Certificate</dt>
+                    <Label>Current</Label>
                   </dl>
                 </li>
                 <li>
                   <dl>
-                    <dt>
-                      <AnimatedAnchor
-                        href="//foggyou.com"
-                        target="_blank"
-                        rel="noreferrer"
-                        underlined
-                        external
-                      >
-                        <span>Foggyou</span>
-                      </AnimatedAnchor>
-                    </dt>
-                    <Label>Web Development, 2021</Label>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>
-                      <AnimatedAnchor
-                        href="//designsomething.co"
-                        target="_blank"
-                        rel="noreferrer"
-                        underlined
-                        external
-                      >
-                        <span>Artitude</span>
-                      </AnimatedAnchor>
-                    </dt>
-                    <Label>Web Design &amp; Development, 2021</Label>
+                    <dt>Graduated in Engineering</dt>
+                    <Label>2015 &ndash; 2017</Label>
                   </dl>
                 </li>
               </List>
@@ -123,18 +98,40 @@ const IndexPage = ({ data }) => {
               </List>
             </Section>
             <Section>
-              <Header>Education</Header>
+              <Header>Projects</Header>
               <List gap="1rem">
+                {posts.map(post => {
+                  return (
                 <li>
                   <dl>
-                    <dt>Google UX Design Professional Certificate</dt>
-                    <Label>Current</Label>
+                        <dt>
+                          <AnimatedLink
+                            to={post.fields.slug}
+                            itemProp="url"
+                            underlined
+                          >
+                            <span>{post.frontmatter.title}</span>
+                          </AnimatedLink>
+                          <Label>{post.frontmatter.meta.year}</Label>
+                        </dt>
                   </dl>
                 </li>
+                  )
+                })}
                 <li>
                   <dl>
-                    <dt>Graduated in Engineering</dt>
-                    <Label>2015 &ndash; 2017</Label>
+                    <dt>
+                      <AnimatedAnchor
+                        href="//designsomething.co"
+                        target="_blank"
+                        rel="noreferrer"
+                        underlined
+                        external
+                      >
+                        <span>Artitude</span>
+                      </AnimatedAnchor>
+                      <Label>2021</Label>
+                    </dt>
                   </dl>
                 </li>
               </List>
@@ -195,6 +192,19 @@ export const siteQuery = graphql`
       siteMetadata {
         title
         description
+      }
+    }
+    allMdx {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          meta {
+            year
+          }
+        }
       }
     }
   }

@@ -4,14 +4,19 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 ## Adding Next
 
-- [ ] Fix to good ol' FOUT
+- [ ] Dynamic background for posts
 - [x] Blog for portfolio content
+- [x] Fix to good ol' FOUT
 - [x] Look into disabling the [displayName](https://styled-components.com/docs/tooling#better-debugging) option
 
 ## Libraries
 
 - [styled-components](https://styled-components.com)
 - [Fontsource](https://fontsource.org)
+
+## Figma
+
+[Link](https://www.figma.com/file/y9dBzF27MZuOGgKbXDJDbF/ricklee.co?node-id=20%3A106)
 
 ## Font
 

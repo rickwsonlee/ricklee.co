@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Meta from "../components/post-meta"
 import { Section, Grid, Col } from "../components/grid"
 import { AnimatedAnchor } from "../components/link"
+import { Subhead, Caption } from "../typography"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
@@ -42,12 +43,15 @@ const BlogPostTemplate = ({ data, location }) => {
             <Meta post={post} />
           </Col>
           <Col>
-            <p>{post.frontmatter.description}</p>
+            <Subhead>{post.frontmatter.description}</Subhead>
           </Col>
         </Grid>
         <Section itemProp="articleBody">
           <MDXRenderer>{post.body}</MDXRenderer>
         </Section>
+        <footer>
+          <Caption>Background by {post.frontmatter.background.author}</Caption>
+        </footer>
       </Section>
     </Layout>
   )

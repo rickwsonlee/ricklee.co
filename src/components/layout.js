@@ -11,6 +11,7 @@ import Footer from "./footer"
 
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
+import { Typography } from "../typography"
 import { Section, Grid, Col } from "./grid"
 import { AnimatedAnchor } from "./link"
 
@@ -24,6 +25,9 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
   }
+
+  // Typography
+  ${Typography}
 `
 
 const shortcodes = { Section, Grid, Col, AnimatedAnchor }

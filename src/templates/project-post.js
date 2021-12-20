@@ -4,6 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Meta from "../components/post-meta"
 import { Section, Grid, Col } from "../components/grid"
 import { AnimatedAnchor } from "../components/link"
 
@@ -38,6 +39,7 @@ const BlogPostTemplate = ({ data, location }) => {
                 <span>Visit Website</span>
               </AnimatedAnchor>
             </Section>
+            <Meta post={post} />
           </Col>
           <Col>
             <p>{post.frontmatter.description}</p>

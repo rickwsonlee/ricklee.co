@@ -1,13 +1,16 @@
 import styled from "styled-components"
 
 export const Section = styled.div`
+  width: 100%;
   padding: ${props => props.p};
   display: flex;
-  flex-direction: column;
+  flex-direction: ${props =>
+    props.direction ? `${props.direction}` : `column`};
   gap: ${props => (props.gap ? `${props.gap}` : `1rem`)};
 `
 
 export const Grid = styled.div`
+  width: 100%;
   display: grid;
   grid-template-columns: ${props =>
     props.sm ? `repeat(${props.sm}, 1fr)` : null};
@@ -24,6 +27,7 @@ export const Grid = styled.div`
 `
 
 export const Col = styled(Section)`
+  justify-content: ${props => (props.justify ? `${props.justify}` : null)};
   align-items: ${props => (props.align ? `${props.align}` : `baseline`)};
   grid-column: ${props => (props.span ? `span ${props.span}` : null)};
 `

@@ -18,19 +18,29 @@ const Meta = ({ post }) => {
       <Section>
         <ListHeader as="h4">Collaboration</ListHeader>
         <List>
-          {post.frontmatter.meta.collaboration.map(collaboration => (
-            <li>
-              <AnimatedAnchor
-                href={collaboration.url}
-                target="_blank"
-                rel="noreferrer"
-                underlined
-                external
-              >
-                <span>{collaboration.name}</span>
-              </AnimatedAnchor>
-            </li>
-          ))}
+          {post.frontmatter.meta.collaboration.map(collaboration => {
+            if (collaboration.url) {
+              return (
+                <li>
+                  <AnimatedAnchor
+                    href={collaboration.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    underlined
+                    external
+                  >
+                    <span>{collaboration.name}</span>
+                  </AnimatedAnchor>
+                </li>
+              )
+            } else {
+              return (
+                <li>
+                  <span>{collaboration.name}</span>
+                </li>
+              )
+            }
+          })}
         </List>
       </Section>
       <Section>

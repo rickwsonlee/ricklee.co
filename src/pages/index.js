@@ -114,22 +114,6 @@ const IndexPage = ({ data, location }) => {
                     </li>
                   )
                 })}
-                <li>
-                  <dl>
-                    <dt>
-                      <AnimatedAnchor
-                        href="//designsomething.co"
-                        target="_blank"
-                        rel="noreferrer"
-                        underlined
-                        external
-                      >
-                        <span>Artitude</span>
-                      </AnimatedAnchor>
-                      <Label>2021</Label>
-                    </dt>
-                  </dl>
-                </li>
               </List>
             </Section>
             <Section>

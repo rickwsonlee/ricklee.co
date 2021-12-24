@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const ListHeader = styled.h3`
+  font-size: 14px;
   opacity: 0.5;
 `
 

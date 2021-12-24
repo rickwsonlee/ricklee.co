@@ -1,5 +1,6 @@
 // Archivo font
-import "@fontsource/archivo"
+import "@fontsource/archivo/300.css"
+import "@fontsource/archivo/variable.css"
 
 import * as React from "react"
 import { ThemeProvider } from "styled-components"

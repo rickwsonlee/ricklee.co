@@ -7,10 +7,5 @@ export const Typography = css`
 `
 
 export const Subhead = styled.p`
-  font-size: 1.5rem;
-`
-
-export const Caption = styled.p`
-  font-size: 14px;
-  opacity: 0.5;
+  font-size: 1.3rem;
 `

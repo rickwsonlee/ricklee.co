@@ -12,12 +12,34 @@ import { AnimatedLink, AnimatedAnchor } from "../components/link"
 
 const Label = styled.dd`
   font-size: 14px;
-  margin-top: 4px;
+  margin-top: 2px;
 `
 
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const siteDescription = data.site.siteMetadata?.description || `Description`
+
+  const specialisations = [
+    `UI/UX`,
+    `Interaction Design`,
+    `Website Design`,
+    `Front-End Development`,
+    `Branding & Identity`,
+  ]
+  const skills = [
+    `User Research`,
+    `Information Architecture`,
+    `Wireframing`,
+    `Prototyping`,
+    `Usability Testing`,
+    `Visual Design`,
+    `Design Systems`,
+    `HTML`,
+    `CSS`,
+    `JavaScript`,
+    `Gatsby (React)`,
+    `Framer`,
+  ]
   const posts = data.allMdx.nodes
 
   return (
@@ -32,27 +54,19 @@ const IndexPage = ({ data, location }) => {
             <Section>
               <ListHeader>Specialisation</ListHeader>
               <List>
-                <li>UI/UX</li>
-                <li>Interaction Design</li>
-                <li>Website Design</li>
-                <li>Front-End Development</li>
-                <li>Branding &amp; Identity</li>
+                {specialisations.map(specialisation => {
+                  return (
+                    <li key={specialisation.toString()}>{specialisation}</li>
+                  )
+                })}
               </List>
             </Section>
             <Section>
               <ListHeader>Skills</ListHeader>
               <List>
-                <li>User Research</li>
-                <li>Information Architecture</li>
-                <li>Wireframing</li>
-                <li>Prototyping</li>
-                <li>Usability Testing</li>
-                <li>Visual Design</li>
-                <li>Design Systems</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Gatsby &#40;React&#41;</li>
+                {skills.map(skill => {
+                  return <li key={skill.toString()}>{skill}</li>
+                })}
               </List>
             </Section>
             <Section>
@@ -98,7 +112,7 @@ const IndexPage = ({ data, location }) => {
               <List gap="1rem">
                 {posts.map(post => {
                   return (
-                    <li>
+                    <li key={post.fields.slug}>
                       <dl>
                         <dt>
                           <AnimatedLink

@@ -3,7 +3,7 @@ module.exports = {
     title: `Rick Lee`,
     description: `Product (UI/UX) Designer`,
     author: `rickwsonlee`,
-    siteUrl: `https://ricklee.co/`,
+    siteUrl: `https://ricklee.co`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -23,12 +23,13 @@ module.exports = {
         name: `ricklee`,
         short_name: `ricklee`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
+        background_color: `#000`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        theme_color: `#fff`,
         display: `minimal-ui`,
-        icons: [], // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        theme_color_in_head: false,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -53,7 +53,7 @@ const IndexPage = ({ data, location }) => {
           <Col gap="2rem">
             <Section>
               <ListHeader>Specialisation</ListHeader>
-              <List>
+              <List nostyle>
                 {specialisations.map(specialisation => {
                   return (
                     <li key={specialisation.toString()}>{specialisation}</li>
@@ -63,7 +63,7 @@ const IndexPage = ({ data, location }) => {
             </Section>
             <Section>
               <ListHeader>Skills</ListHeader>
-              <List>
+              <List nostyle>
                 {skills.map(skill => {
                   return <li key={skill.toString()}>{skill}</li>
                 })}
@@ -71,7 +71,7 @@ const IndexPage = ({ data, location }) => {
             </Section>
             <Section>
               <ListHeader>Education</ListHeader>
-              <List gap="1rem">
+              <List nostyle gap="1rem">
                 <li>
                   <dl>
                     <dt>Google UX Design Professional Certificate</dt>
@@ -90,7 +90,7 @@ const IndexPage = ({ data, location }) => {
           <Col gap="2rem">
             <Section>
               <ListHeader>Experience</ListHeader>
-              <List gap="1rem">
+              <List nostyle gap="1rem">
                 <li>
                   <dl>
                     <dt>Web Designer</dt>
@@ -109,7 +109,7 @@ const IndexPage = ({ data, location }) => {
             </Section>
             <Section>
               <ListHeader>Projects</ListHeader>
-              <List gap="1rem">
+              <List nostyle gap="1rem">
                 {posts.map(post => {
                   return (
                     <li key={post.fields.slug}>
@@ -132,7 +132,7 @@ const IndexPage = ({ data, location }) => {
             </Section>
             <Section>
               <ListHeader>Contact</ListHeader>
-              <List gap="1rem">
+              <List nostyle gap="1rem">
                 <li>
                   <AnimatedAnchor href="mailto:hello@ricklee.co" underlined>
                     <span>hello&#64;ricklee.co</span>
@@ -188,7 +188,7 @@ export const siteQuery = graphql`
         description
       }
     }
-    allMdx {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         fields {
           slug

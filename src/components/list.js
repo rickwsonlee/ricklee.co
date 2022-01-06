@@ -6,9 +6,9 @@ export const ListHeader = styled.h3`
 `
 
 export const List = styled.ul`
-  list-style: none;
-  padding: 0;
+  list-style: ${props => (props.nostyle ? `none` : null)};
   margin: 0;
+  padding-left: ${props => (props.nostyle ? `0` : `2rem`)};
 
   li:not(:last-child) {
     margin-bottom: ${props => (props.gap ? `${props.gap}` : null)};

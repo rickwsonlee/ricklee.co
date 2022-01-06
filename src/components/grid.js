@@ -14,7 +14,7 @@ export const Grid = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: ${props =>
-    props.sm ? `repeat(${props.sm}, 1fr)` : null};
+    props.sm ? `repeat(${props.sm}, 1fr)` : `1fr`};
   grid-gap: ${props => (props.gap ? `${props.gap}` : `1rem 2rem`)};
 
   @media (min-width: 43.75rem) {
@@ -29,6 +29,11 @@ export const Grid = styled.div`
 
 export const Col = styled(Section)`
   justify-content: ${props => (props.justify ? `${props.justify}` : null)};
-  align-items: ${props => (props.align ? `${props.align}` : `baseline`)};
-  grid-column: ${props => (props.span ? `span ${props.span}` : null)};
+  align-items: baseline;
+  grid-column: 1fr;
+
+  @media (min-width: 43.75rem) {
+    align-items: ${props => (props.align ? `${props.align}` : null)};
+    grid-column: ${props => (props.span ? `span ${props.span}` : null)};
+  }
 `

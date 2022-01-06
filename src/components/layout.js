@@ -11,8 +11,10 @@ import Footer from "./footer"
 
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
-import { Typography } from "../typography"
+import { Typography, Label } from "../typography"
 import { Section, Grid, Col } from "./grid"
+import { List } from "./list"
+import { Button } from "./button"
 import { AnimatedAnchor } from "./link"
 
 const GlobalStyle = createGlobalStyle`
@@ -29,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
 
     @supports (font-variation-settings: normal) {
       font-family: "ArchivoVariable", sans-serif;
-      font-variation-settings: "wght" 350;
+      font-variation-settings: "wght" 320;
     }
   }
 
@@ -37,7 +39,15 @@ const GlobalStyle = createGlobalStyle`
   ${Typography}
 `
 
-const shortcodes = { Section, Grid, Col, AnimatedAnchor }
+const shortcodes = {
+  Section,
+  Grid,
+  Col,
+  Label,
+  List,
+  Button,
+  AnimatedAnchor,
+}
 
 const Layout = ({ children, location }) => {
   return (

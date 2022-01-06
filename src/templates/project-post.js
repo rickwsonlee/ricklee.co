@@ -30,15 +30,17 @@ const BlogPostTemplate = ({ data, location }) => {
           <Col gap="2rem">
             <Section>
               <h1 itemProp="headline">{post.frontmatter.title}</h1>
-              <AnimatedAnchor
-                href={post.frontmatter.meta.website}
-                target="_blank"
-                rel="noopener"
-                underlined
-                external
-              >
-                <span>Visit Website</span>
-              </AnimatedAnchor>
+              {post.frontmatter.meta.website && (
+                <AnimatedAnchor
+                  href={post.frontmatter.meta.website}
+                  target="_blank"
+                  rel="noopener"
+                  underlined
+                  external
+                >
+                  <span>Visit Website</span>
+                </AnimatedAnchor>
+              )}
             </Section>
             <Meta post={post} />
           </Col>
@@ -46,8 +48,10 @@ const BlogPostTemplate = ({ data, location }) => {
             <Subhead>{post.frontmatter.description}</Subhead>
           </Col>
         </Grid>
-        <Section itemProp="articleBody">
-          <MDXRenderer>{post.body}</MDXRenderer>
+        <Section itemProp="articleBody" gap="4rem">
+          <MDXRenderer localImages={post.frontmatter.embeddedImagesLocal}>
+            {post.body}
+          </MDXRenderer>
         </Section>
         <footer></footer>
       </Section>
@@ -74,11 +78,17 @@ export const pageQuery = graphql`
         description
         meta {
           website
-          year
           contribution
+          year
+          duration
           collaboration {
             name
             url
+          }
+        }
+        embeddedImagesLocal {
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }

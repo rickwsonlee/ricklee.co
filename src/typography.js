@@ -14,10 +14,25 @@ export const Typography = css`
   }
 `
 
+export const HiddenText = styled.p`
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+`
+
 export const Subhead = styled.p`
   font-size: 1.3rem;
 `
 
 export const Label = styled.p`
-  opacity: 0.5;
+  font-size: 14px;
+
+  ${props =>
+    props.transparent &&
+    css`
+      opacity: 0.5;
+    `}
 `

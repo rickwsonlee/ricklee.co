@@ -1,14 +1,17 @@
 import * as React from "react"
 
 import { Section, Grid } from "./grid"
-import { ListHeader, List } from "./list"
+import { List } from "./list"
 import { AnimatedAnchor } from "./link"
+import { Label } from "../typography"
 
 const Meta = ({ post }) => {
   return (
     <Grid lg="3" md="2" sm="2">
       <Section>
-        <ListHeader as="h4">Contribution</ListHeader>
+        <Label as="h4" transparent>
+          Contribution
+        </Label>
         <List nostyle>
           {post.frontmatter.meta.contribution.map(contribution => (
             <li>{contribution}</li>
@@ -17,7 +20,9 @@ const Meta = ({ post }) => {
       </Section>
       {post.frontmatter.meta.collaboration.length > 0 && (
         <Section>
-          <ListHeader as="h4">Collaboration</ListHeader>
+          <Label as="h4" transparent>
+            Collaboration
+          </Label>
           <List nostyle>
             {post.frontmatter.meta.collaboration.map(collaboration => {
               if (collaboration.url) {
@@ -47,12 +52,16 @@ const Meta = ({ post }) => {
       )}
       {post.frontmatter.meta.duration && (
         <Section>
-          <ListHeader as="h4">Duration</ListHeader>
+          <Label as="h4" transparent>
+            Duration
+          </Label>
           <p>{post.frontmatter.meta.duration}</p>
         </Section>
       )}
       <Section>
-        <ListHeader as="h4">Year</ListHeader>
+        <Label as="h4" transparent>
+          Year
+        </Label>
         <p>{post.frontmatter.meta.year}</p>
       </Section>
     </Grid>

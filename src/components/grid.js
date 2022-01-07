@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Section = styled.div`
   width: 100%;
@@ -16,6 +16,13 @@ export const Grid = styled.div`
   grid-template-columns: ${props =>
     props.sm ? `repeat(${props.sm}, 1fr)` : `1fr`};
   grid-gap: ${props => (props.gap ? `${props.gap}` : `1rem 2rem`)};
+
+  ${props =>
+    props.sticky &&
+    css`
+      position: sticky;
+      top: 32px;
+    `}
 
   @media (min-width: 43.75rem) {
     grid-template-columns: ${props =>

@@ -1,19 +1,15 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import styled from "styled-components"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import PostCard from "../components/post-card"
 
 import { Section, Grid, Col } from "../components/grid"
-import { ListHeader, List } from "../components/list"
-import { AnimatedLink, AnimatedAnchor } from "../components/link"
-
-const Label = styled.dd`
-  font-size: 14px;
-  margin-top: 2px;
-`
+import { List } from "../components/list"
+import { AnimatedAnchor } from "../components/link"
+import { HiddenText, Label } from "../typography"
 
 const IndexPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,7 +20,6 @@ const IndexPage = ({ data, location }) => {
     `Interaction Design`,
     `Website Design`,
     `Front-End Development`,
-    `Branding & Identity`,
   ]
   const skills = [
     `User Research`,
@@ -38,7 +33,6 @@ const IndexPage = ({ data, location }) => {
     `CSS`,
     `JavaScript`,
     `Gatsby (React)`,
-    `Framer`,
   ]
   const posts = data.allMdx.nodes
 
@@ -49,112 +43,116 @@ const IndexPage = ({ data, location }) => {
         <title>{`${siteTitle} — ${siteDescription}`}</title>
       </Helmet>
       <Section p="5rem 2rem">
-        <Grid gap="2rem">
-          <Col gap="2rem">
-            <Section>
-              <ListHeader>Specialisation</ListHeader>
-              <List nostyle>
-                {specialisations.map(specialisation => {
-                  return (
-                    <li key={specialisation.toString()}>{specialisation}</li>
-                  )
-                })}
-              </List>
-            </Section>
-            <Section>
-              <ListHeader>Skills</ListHeader>
-              <List nostyle>
-                {skills.map(skill => {
-                  return <li key={skill.toString()}>{skill}</li>
-                })}
-              </List>
-            </Section>
-            <Section>
-              <ListHeader>Education</ListHeader>
-              <List nostyle gap="1rem">
-                <li>
-                  <dl>
-                    <dt>Google UX Design Professional Certificate</dt>
-                    <Label>Current</Label>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>Graduated in Engineering</dt>
-                    <Label>2015 &ndash; 2017</Label>
-                  </dl>
-                </li>
-              </List>
-            </Section>
-          </Col>
-          <Col gap="2rem">
-            <Section>
-              <ListHeader>Experience</ListHeader>
-              <List nostyle gap="1rem">
-                <li>
-                  <dl>
-                    <dt>Web Designer</dt>
-                    <dd>Freelance</dd>
-                    <Label>2019 &ndash; Present</Label>
-                  </dl>
-                </li>
-                <li>
-                  <dl>
-                    <dt>Community Team</dt>
-                    <dd>Common Ground Coworking Space</dd>
-                    <Label>2019</Label>
-                  </dl>
-                </li>
-              </List>
-            </Section>
-            <Section>
-              <ListHeader>Projects</ListHeader>
-              <List nostyle gap="1rem">
-                {posts.map(post => {
-                  return (
-                    <li key={post.fields.slug}>
+        <Grid lg="2" gap="2rem">
+          <Col>
+            <HiddenText as="h2">Info</HiddenText>
+            <Grid lg="2" gap="2rem" sticky>
+              <Col gap="2rem">
+                <Section>
+                  <Label as="h3" transparent>
+                    Specialisation
+                  </Label>
+                  <List nostyle>
+                    {specialisations.map(specialisation => {
+                      return (
+                        <li key={specialisation.toString()}>
+                          {specialisation}
+                        </li>
+                      )
+                    })}
+                  </List>
+                </Section>
+                <Section>
+                  <Label as="h3" transparent>
+                    Skills
+                  </Label>
+                  <List nostyle>
+                    {skills.map(skill => {
+                      return <li key={skill.toString()}>{skill}</li>
+                    })}
+                  </List>
+                </Section>
+              </Col>
+              <Col gap="2rem">
+                <Section>
+                  <Label as="h3" transparent>
+                    Experience
+                  </Label>
+                  <List nostyle gap="1rem">
+                    <li>
                       <dl>
-                        <dt>
-                          <AnimatedLink
-                            to={post.fields.slug}
-                            itemProp="url"
-                            underlined
-                          >
-                            <span>{post.frontmatter.title}</span>
-                          </AnimatedLink>
-                          <Label>{post.frontmatter.meta.year}</Label>
-                        </dt>
+                        <dt>Web Designer</dt>
+                        <dd>Freelance</dd>
+                        <dd>2019 &ndash; Present</dd>
                       </dl>
                     </li>
-                  )
-                })}
-              </List>
-            </Section>
-            <Section>
-              <ListHeader>Contact</ListHeader>
-              <List nostyle gap="1rem">
-                <li>
-                  <AnimatedAnchor href="mailto:hello@ricklee.co" underlined>
-                    <span>hello&#64;ricklee.co</span>
-                  </AnimatedAnchor>
-                </li>
-                <li>
-                  <AnimatedAnchor
-                    href="//www.linkedin.com/in/rickwsonlee"
-                    target="_blank"
-                    rel="noopener"
-                    underlined
-                    external
-                  >
-                    <span>LinkedIn</span>
-                  </AnimatedAnchor>
-                </li>
-              </List>
-            </Section>
+                    <li>
+                      <dl>
+                        <dt>Community Team</dt>
+                        <dd>Common Ground Coworking Space</dd>
+                        <dd>2019</dd>
+                      </dl>
+                    </li>
+                  </List>
+                </Section>
+                <Section>
+                  <Label as="h3" transparent>
+                    Education
+                  </Label>
+                  <List nostyle gap="1rem">
+                    <li>
+                      <dl>
+                        <dt>Google UX Design Professional Certificate</dt>
+                        <dd>Current</dd>
+                      </dl>
+                    </li>
+                    <li>
+                      <dl>
+                        <dt>Graduated in Engineering</dt>
+                        <dd>2015 &ndash; 2017</dd>
+                      </dl>
+                    </li>
+                  </List>
+                </Section>
+                <Section>
+                  <Label as="h3" transparent>
+                    Contact
+                  </Label>
+                  <List nostyle gap="1rem">
+                    <li>
+                      <AnimatedAnchor href="mailto:hello@ricklee.co" underlined>
+                        <span>hello&#64;ricklee.co</span>
+                      </AnimatedAnchor>
+                    </li>
+                    <li>
+                      <AnimatedAnchor
+                        href="//www.linkedin.com/in/rickwsonlee"
+                        target="_blank"
+                        rel="noopener"
+                        underlined
+                        external
+                      >
+                        <span>LinkedIn</span>
+                      </AnimatedAnchor>
+                    </li>
+                  </List>
+                </Section>
+              </Col>
+            </Grid>
+          </Col>
+          <Col>
+            <HiddenText as="h2" id="archive">
+              Archive
+            </HiddenText>
+            <List nostyle gap="2rem">
+              {posts.map(post => {
+                return <PostCard post={post} />
+              })}
+            </List>
           </Col>
         </Grid>
       </Section>
-      <Section as="section" p="1rem 2rem">
+      {/* <Section as="section" p="1rem 2rem">
         <Grid>
           <Col span="2">
             <p>
@@ -173,7 +171,7 @@ const IndexPage = ({ data, location }) => {
             </p>
           </Col>
         </Grid>
-      </Section>
+      </Section> */}
     </Layout>
   )
 }
@@ -195,7 +193,15 @@ export const siteQuery = graphql`
         }
         frontmatter {
           title
+          featuredImage {
+            src {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 1.33)
+              }
+            }
+          }
           meta {
+            contribution
             year
           }
         }

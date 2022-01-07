@@ -48,7 +48,7 @@ const Header = ({ location }) => {
           </AnimatedLink>
         </Col>
         <Col>
-          <AnimatedLink to="/">
+          <AnimatedLink to="/#archive">
             <span>Back to Archive</span>
           </AnimatedLink>
         </Col>

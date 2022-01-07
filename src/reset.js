@@ -27,7 +27,6 @@ export const Reset = css`
   }
 
   a {
-    display: inline-block;
     color: inherit;
     text-decoration: none;
   }

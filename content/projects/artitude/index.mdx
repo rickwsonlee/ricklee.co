@@ -2,19 +2,26 @@
 title: Artitude
 date: "2021-12-22"
 description: "Thriving in the heart of Penang, Artitude Design Studio’s interior design practice lives by an ideology of creating functional spaces for many generations to live."
+featuredImage:
+  src: "./cover.jpg"
+  alt: "Website mockup"
 meta:
   website: "//designsomething.co"
   contribution: ["Web Development", "UX Design"]
   year: "2021"
   collaboration: [{ name: "Josie Writes Hub" }]
-background:
-  src: ""
-  alt: ""
-  author: ""
+embeddedImagesLocal:
+  - cover.jpg
 ---
 
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+<GatsbyImage alt="dummy" image={getImage(props.localImages[0])} />
+
 <Grid lg="2" md="1">
-  <Col></Col>
+  <Col align="flex-end">
+    <Label>Coming Soon</Label>
+  </Col>
   <Col>
     <p>
       The designers at Artitude Design Studio (aka Design Something) produce

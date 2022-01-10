@@ -1,27 +1,33 @@
 ---
 title: Foggyou
 date: "2021-12-20"
-description: "I was intrigued when TE PERSPECTIVE first approached me about Foggyou. It was unlike the fog machine that I had once operated at a school performance as a stagehand. It is for serious business. Literally."
+description: "Foggyou isn't a typical fog machine. It is for serious business. Literally."
+featuredImage:
+  src: "./cover.jpg"
+  alt: "Website mockup"
 meta:
   website: "//foggyou.com"
   contribution: ["Web Development", "UX Design"]
   year: "2021"
   collaboration: [{ name: "TE PERSPECTIVE", url: "//teperspective.com" }]
-background:
-  src: "./tom-barrett-2t60-JYQ5pk-unsplash.jpg"
-  alt: ""
-  author: "Tom Barrett"
+embeddedImagesLocal:
+  - cover.jpg
 ---
 
-<Grid lg="2" md="1">
-  <Col></Col>
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+<GatsbyImage alt="dummy" image={getImage(props.localImages[0])} />
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label>Coming Soon</Label>
+  </Col>
   <Col>
     <p>
-      Believing that prevention is better than cure, Foggyou helps property
-      owners secure their valuables and premises in the event of a theft crime.
-      Their solution is a self-fitted fog cannon device that produces thick
-      harmless fog in seconds when activated remotely, making criminal
-      activities impossible to take place.
+      Foggyou helps property owners secure their valuables and premises in the
+      event of a theft crime. Their solution is a self-fitted fog cannon device
+      that produces thick harmless fog in seconds when activated remotely,
+      making criminal activities impossible to take place.
     </p>
     <p>
       Working with TE PERSPECTIVE, we have created an e-commerce experience for
@@ -29,7 +35,8 @@ background:
       while thoughtfully implementing their new identity at every touchpoint.
     </p>
     <p>
-      Branding is done by TE PERSPECTIVE.{" "}
+      The full case study is to be published. Branding is done by TE
+      PERSPECTIVE.{" "}
       <AnimatedAnchor
         href="//teperspective.com"
         target="_blank"

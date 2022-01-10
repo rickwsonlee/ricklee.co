@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Meta from "../components/post-meta"
 import { Section, Grid, Col } from "../components/grid"
-import { AnimatedAnchor } from "../components/link"
 import { Subhead } from "../typography"
+import { Button } from "../components/button"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
@@ -31,15 +31,13 @@ const BlogPostTemplate = ({ data, location }) => {
             <Section>
               <h1 itemProp="headline">{post.frontmatter.title}</h1>
               {post.frontmatter.meta.website && (
-                <AnimatedAnchor
+                <Button
                   href={post.frontmatter.meta.website}
                   target="_blank"
                   rel="noopener"
-                  underlined
-                  external
                 >
-                  <span>Visit Website</span>
-                </AnimatedAnchor>
+                  Visit Website
+                </Button>
               )}
             </Section>
             <Meta post={post} />

@@ -9,23 +9,34 @@ const FeaturedImage = styled(GatsbyImage)`
   margin-bottom: 1rem;
 `
 
+const Article = styled.article`
+  & header {
+    opacity: 0.5;
+    transition: opacity 0.25s ease-out;
+  }
+
+  &:hover header {
+    opacity: 1;
+  }
+`
+
 const PostCard = ({ post }) => {
   let contributions = post.frontmatter.meta.contribution
 
   return (
     <li key={post.fields.slug}>
       <Link to={post.fields.slug} itemProp="url">
-        <article itemScope itemType="http://schema.org/Article">
+        <Article itemScope itemType="http://schema.org/Article">
           <FeaturedImage
             image={getImage(post.frontmatter.featuredImage.src)}
             alt={post.frontmatter.featuredImage.alt}
             itemProp="image"
           />
-          <h3 itemProp="headline">{post.frontmatter.title}</h3>
-          <footer>
+          <header>
+            <h3 itemProp="name">{post.frontmatter.title}</h3>
             <Label>{`${contributions[0]}, ${post.frontmatter.meta.year}`}</Label>
-          </footer>
-        </article>
+          </header>
+        </Article>
       </Link>
     </li>
   )

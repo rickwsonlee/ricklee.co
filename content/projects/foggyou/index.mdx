@@ -1,26 +1,31 @@
 ---
 title: Foggyou
-date: "2021-12-20"
+date: "2022-01-13"
 description: "Foggyou isn't a typical fog machine. It is for serious business. Literally."
 featuredImage:
-  src: "./cover.jpg"
+  src: "./foggyou_cover.jpg"
   alt: "Website mockup"
 meta:
   website: "//foggyou.com"
-  contribution: ["Web Development", "UX Design"]
+  contribution: ["E-Commerce", "Web Development", "Information Architecture"]
   year: "2021"
   collaboration: [{ name: "TE PERSPECTIVE", url: "//teperspective.com" }]
 embeddedImagesLocal:
-  - cover.jpg
+  - foggyou_cover.jpg
+  - foggyou_user-flow_customer.jpg
+  - foggyou_user-flow_distributor.jpg
+  - foggyou_information-architecture.jpg
+  - foggyou_atomic-design-system.jpg
+  - foggyou_responsive-design.jpg
 ---
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-<GatsbyImage alt="dummy" image={getImage(props.localImages[0])} />
+<GatsbyImage alt="" image={getImage(props.localImages[0])} />
 
 <Grid lg="2">
   <Col align="flex-end">
-    <Label>Coming Soon</Label>
+    <Label transparent>Overview</Label>
   </Col>
   <Col>
     <p>
@@ -29,24 +34,205 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
       that produces thick harmless fog in seconds when activated remotely,
       making criminal activities impossible to take place.
     </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Role</Label>
+  </Col>
+  <Col>
     <p>
-      Working with TE PERSPECTIVE, we have created an e-commerce experience for
-      Foggyou, that is not only delightful but also optimized across platforms,
-      while thoughtfully implementing their new identity at every touchpoint.
+      As an information architect &amp; UI developer, I am responsible for
+      planning and designing the website structure, implementing the final
+      design, developing and testing the final product.
+    </p>
+    <h3>Collaboration</h3>
+    <p>
+      I work closely with TE PERSPECTIVE, who is leading the project in the
+      aspect of branding, along with the content team of professionals in
+      various disciplines including copywriting, photography, and videography.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Discovery</Label>
+  </Col>
+  <Col>
+    <p>
+      We distilled the client&apos;s goals into two primary goals of the
+      website:
+    </p>
+    <List gap="8px">
+      <li>
+        To sell fog cannon devices &amp; parts directly to consumers (product),
+      </li>
+      <li>To sign up global retailers as distributors (awareness).</li>
+    </List>
+    <p>
+      Two user groups were then identified to be (1) owners of a premise who
+      want to protect their valuables and operators, and (2) retailers for
+      product distribution.
     </p>
     <p>
-      The full case study is to be published. Branding is done by TE
-      PERSPECTIVE.{" "}
-      <AnimatedAnchor
-        href="//teperspective.com"
-        target="_blank"
-        rel="noreferrer"
-        underlined
-        external
-      >
-        <span>Find out more about them</span>
-      </AnimatedAnchor>
-      .
+      Users would expect to learn about a fog cannon device and Foggyou,
+      purchase the fog cannon device &amp; replacement parts, and for retailers
+      to register their interest to become a distributor, all through the
+      website.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Strategy</Label>
+  </Col>
+  <Col>
+    <p>
+      E-commerce sites are relatively large. We were quick to agree on the
+      modular design approach to ensure the scalability of our design.
+    </p>
+    <p>
+      I laid out the order&ndash;checkout flow of an e-commerce site early on to
+      better communicate the scope and user flow with the designers, which we
+      all appreciated.
+    </p>
+    <p>
+      We also outlined some other specifications to meet specific user goals,
+      i.e.
+    </p>
+    <List gap="8px">
+      <li>
+        Country-specific sites to serve local content (geolocation and
+        multilingual support),
+      </li>
+      <li>
+        Landing page(s) for retailers to register their interest to become a
+        distributor,
+      </li>
+      <li>
+        Coming Soon page with an email sign-up form is displayed to capture
+        early interest.
+      </li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Define</Label>
+  </Col>
+  <Col>
+    <h2>User Flows</h2>
+    <p>
+      We created two sets of user flows to meet the needs of each user group
+      respectively.
+    </p>
+    <h3>Customers</h3>
+    <GatsbyImage alt="" image={getImage(props.localImages[1])} />
+    <h3>Distributors</h3>
+    <GatsbyImage alt="" image={getImage(props.localImages[2])} />
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end"></Col>
+  <Col>
+    <h2>Information Architecture</h2>
+    <p>
+      With well-defined user flows, several key and fundamental pages and their
+      information were identified. The information is then organized to map out
+      its relationship, hierarchy, and navigation, in a way that is intuitive to
+      humans, as well as web crawler(s).
+    </p>
+  </Col>
+</Grid>
+
+<GatsbyImage alt="" image={getImage(props.localImages[3])} />
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Workflow</Label>
+  </Col>
+  <Col>
+    <h2>Workflow</h2>
+    <p>
+      With a design system in place, I began the front-end development process.
+      Here is an overview.
+    </p>
+    <h3>I define the theme.</h3>
+    <p>
+      In a theme, style properties such as colors and typography are defined
+      globally as variables, which its value can then be referenced.
+    </p>
+    <p>
+      Fonts, web or custom, are imported locally at this point, which in this
+      case is the latter.
+    </p>
+    <h3>I build reusable components for the layout.</h3>
+    <p>
+      I prioritize the components that form the layout of the website, which are
+      commonly the header and footer.
+    </p>
+    <p>
+      Smaller components such as menus, buttons, and links are then introduced
+      that eventually form a library.
+    </p>
+    <GatsbyImage alt="" image={getImage(props.localImages[4])} />
+    <h3>I build the page components, then onto content templates.</h3>
+    <p>
+      With a sizable component library comprising the basic elements, I proceed
+      to the larger parts of the complex unit, pages &amp; templates.
+    </p>
+    <h3>I test the website for production.</h3>
+    <p>
+      I ensure the website is rendered consistently by testing for compatibility
+      with developer tools that are built into different browsers, as well as
+      mobile responsiveness by viewing the website on various screen sizes and
+      devices in responsive design mode.
+    </p>
+  </Col>
+</Grid>
+
+<GatsbyImage alt="" image={getImage(props.localImages[5])} />
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Other Responsibilities</Label>
+  </Col>
+  <Col>
+    <List gap="8px">
+      <li>
+        Setting up third-party integrations, i.e. payment gateway, analytic
+        tools
+      </li>
+      <li>Setting up hosting</li>
+      <li>Deploying the website</li>
+      <li>Optimizing website performance</li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Final Thoughts</Label>
+  </Col>
+  <Col>
+    <p>
+      We created a delightful e-commerce experience for Foggyou that is
+      optimized across platforms and implemented their new identity thoughtfully
+      at every touchpoint.
+    </p>
+    <h3>Takeaway</h3>
+    <p>
+      A design system with unified design practices and implementation in mind
+      is a key to creating a cohesive and accessible product.
+    </p>
+    <p>
+      It results in a clear visual hierarchy in the overall product and semantic
+      HTML can be implemented effectively.
     </p>
   </Col>
 </Grid>

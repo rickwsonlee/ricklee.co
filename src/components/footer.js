@@ -9,7 +9,8 @@ const Footer = () => {
       <Grid sm="2">
         <Col span="2">
           <div>
-            © {new Date().getFullYear()}. Built with{" "}
+            © {new Date().getFullYear()}.{` `}
+            {/*  Built with{" "}
             <AnimatedAnchor
               href="//www.gatsbyjs.com/showcase/"
               target="_blank"
@@ -17,6 +18,16 @@ const Footer = () => {
               external
             >
               <span>Gatsby</span>
+            </AnimatedAnchor>
+            .{` `} */}
+            <AnimatedAnchor
+              href="//github.com/rickwsonlee/ricklee.co"
+              target="_blank"
+              rel="noopener"
+              underlined
+              external
+            >
+              <span>GitHub</span>
             </AnimatedAnchor>
           </div>
         </Col>

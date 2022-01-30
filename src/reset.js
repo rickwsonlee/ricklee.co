@@ -26,6 +26,13 @@ export const Reset = css`
     margin: 0;
   }
 
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+  }
+
   a {
     color: inherit;
     text-decoration: none;

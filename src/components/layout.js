@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { createGlobalStyle, ThemeProvider } from "styled-components"
 import { MDXProvider } from "@mdx-js/react"
 
-import fontURL from "@fontsource/archivo/files/archivo-latin-300-normal.woff2"
+import fontURL from "@fontsource/inter/files/inter-latin-400-normal.woff2"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -25,10 +25,25 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
+    font-family: ${({ theme }) => theme.font.static};
+    font-weight: 400;
+    line-height: 1.3;
+    
+    * {
+      letter-spacing: -.01em;
+    }
 
     @supports (font-variation-settings: normal) {
-      font-family: "ArchivoVariable", sans-serif;
-      font-variation-settings: "wght" 320;
+      font-family: ${({ theme }) => theme.font.variable};
+      font-variation-settings: "wght" 450;
+    }
+  }
+
+  p {
+    margin-bottom: 1em;
+
+    :last-child {
+      margin-bottom: 0;
     }
   }
 

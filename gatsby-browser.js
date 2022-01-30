@@ -1,6 +1,8 @@
-// Archivo font
-import "@fontsource/archivo/300.css"
-import "@fontsource/archivo/variable.css"
+// Inter font
+import "@fontsource/inter"
+import "@fontsource/inter/500.css"
+import "@fontsource/inter/600.css"
+import "@fontsource/inter/variable.css"
 
 import * as React from "react"
 import { ThemeProvider } from "styled-components"

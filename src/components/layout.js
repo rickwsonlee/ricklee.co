@@ -29,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
     font-family: ${({ theme }) => theme.font.static};
+    font-weight: 400;
+    line-height: 1.3;
+    
+    * {
+      letter-spacing: -.01em;
+    }
 
     @supports (font-variation-settings: normal) {
       font-family: "ArchivoVariable", sans-serif;

@@ -1,6 +1,12 @@
 import styled, { css } from "styled-components"
 
 export const Typography = css`
+  h1,
+  h2 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
   h1 {
     font-size: 3rem;
   }
@@ -11,6 +17,7 @@ export const Typography = css`
 
   h3 {
     font-size: 1.25rem;
+    font-weight: 500;
   }
 `
 
@@ -23,12 +30,14 @@ export const HiddenText = styled.p`
   overflow: hidden;
 `
 
-export const Subhead = styled.p`
-  font-size: 1.3rem;
+export const Display = styled.p`
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
 `
 
 export const Label = styled.p`
-  font-size: 14px;
+  font-size: ${props => (props.size ? `${props.size}` : null)};
 
   ${props =>
     props.transparent &&

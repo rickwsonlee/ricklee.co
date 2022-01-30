@@ -7,9 +7,9 @@ export const Reset = css`
     box-sizing: border-box;
   }
 
-  html:focus-within {
+  /* html:focus-within {
     scroll-behavior: smooth;
-  }
+  } */
 
   body,
   h1,

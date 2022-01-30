@@ -8,6 +8,10 @@ import * as React from "react"
 import { ThemeProvider } from "styled-components"
 import { theme } from "./src/theme"
 
+export const shouldUpdateScroll = () => {
+  window.scrollTo(0, 0)
+}
+
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>{element}</ThemeProvider>
 )

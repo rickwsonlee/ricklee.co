@@ -33,7 +33,16 @@ const IndexPage = ({ data, location }) => {
                 </Display>
                 <Display>
                   I design interfaces and interactive experiences to delight and
-                  inspire.
+                  inspire.{" "}
+                  <AnimatedAnchor
+                    href="//github.com/rickwsonlee/ricklee.co"
+                    target="_blank"
+                    rel="noopener"
+                    underlined
+                  >
+                    <span>I write code too</span>
+                  </AnimatedAnchor>
+                  .
                 </Display>
                 <Display>
                   My work encompasses UI/UX design, web/mobile app strategy

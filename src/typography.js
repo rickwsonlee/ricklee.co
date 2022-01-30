@@ -5,6 +5,10 @@ export const Typography = css`
   h2 {
     font-weight: 600;
     letter-spacing: -0.02em;
+
+    @supports (font-variation-settings: normal) {
+      font-variation-settings: "wght" 600;
+    }
   }
 
   h1 {
@@ -18,6 +22,10 @@ export const Typography = css`
   h3 {
     font-size: 1.25rem;
     font-weight: 500;
+
+    @supports (font-variation-settings: normal) {
+      font-variation-settings: "wght" 500;
+    }
   }
 `
 
@@ -34,6 +42,10 @@ export const Display = styled.p`
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: -0.02em;
+
+  @supports (font-variation-settings: normal) {
+    font-variation-settings: "wght" 500;
+  }
 `
 
 export const Label = styled.p`

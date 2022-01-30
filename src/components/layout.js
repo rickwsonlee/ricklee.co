@@ -37,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @supports (font-variation-settings: normal) {
-      font-family: "ArchivoVariable", sans-serif;
-      font-variation-settings: "wght" 320;
+      font-family: ${({ theme }) => theme.font.variable};
+      font-variation-settings: "wght" 450;
     }
   }
 

@@ -11,21 +11,18 @@ import Footer from "./footer"
 
 import { darkTheme } from "../theme"
 import { Reset } from "../reset"
-import { Typography, Label } from "../typography"
+import { Typography, Display, Label } from "../typography"
 import { Section, Grid, Col } from "./grid"
 import { List } from "./list"
 import { Button } from "./button"
 import { AnimatedAnchor } from "./link"
+import Figure from "./figure"
 
 const GlobalStyle = createGlobalStyle`
   // reset.js
   ${Reset}
 
   body {
-    font-family: "Archivo", sans-serif;
-    font-weight: 300;
-    line-height: 1.33;
-    letter-spacing: .02em;
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
 
@@ -43,10 +40,12 @@ const shortcodes = {
   Section,
   Grid,
   Col,
+  Display,
   Label,
   List,
   Button,
   AnimatedAnchor,
+  Figure,
 }
 
 const Layout = ({ children, location }) => {

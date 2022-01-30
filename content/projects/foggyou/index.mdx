@@ -1,15 +1,23 @@
 ---
 title: Foggyou
-date: "2022-01-13"
-description: "Foggyou isn't a typical fog machine. It is for serious business. Literally."
+subtitle: "Building an e-commerce experience for a security system brand"
+status: "Published"
+date:
+  modified: ""
+  published: "2022-01-13"
 featuredImage:
   src: "./foggyou_cover.jpg"
   alt: "Website mockup"
 meta:
   website: "//foggyou.com"
-  contribution: ["E-Commerce", "Web Development", "Information Architecture"]
+  contribution: ["Web Development", "Information Architecture"]
   year: "2021"
-  collaboration: [{ name: "TE PERSPECTIVE", url: "//teperspective.com" }]
+  duration:
+  collaboration:
+    [
+      { name: "TE PERSPECTIVE", url: "//teperspective.com" },
+      { name: "Josie Writes Hub" },
+    ]
 embeddedImagesLocal:
   - foggyou_cover.jpg
   - foggyou_user-flow_customer.jpg
@@ -17,11 +25,13 @@ embeddedImagesLocal:
   - foggyou_information-architecture.jpg
   - foggyou_atomic-design-system.jpg
   - foggyou_responsive-design.jpg
+
+description: "Foggyou isn't a typical fog machine. It is for serious business. Literally."
 ---
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-<GatsbyImage alt="" image={getImage(props.localImages[0])} />
+<Figure alt="Website on browser" image={getImage(props.localImages[0])} />
 
 <Grid lg="2">
   <Col align="flex-end">
@@ -121,7 +131,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
 </Grid>
 
 <Grid lg="2">
-  <Col align="flex-end">
+  <Col m="8px 0" align="flex-end">
     <Label transparent>Define</Label>
   </Col>
   <Col>
@@ -131,9 +141,15 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
       respectively.
     </p>
     <h3>Customers</h3>
-    <GatsbyImage alt="" image={getImage(props.localImages[1])} />
+    <Figure
+      alt="Customers' user journey"
+      image={getImage(props.localImages[1])}
+    />
     <h3>Distributors</h3>
-    <GatsbyImage alt="" image={getImage(props.localImages[2])} />
+    <Figure
+      alt="Distributors' user journey"
+      image={getImage(props.localImages[2])}
+    />
   </Col>
 </Grid>
 
@@ -150,10 +166,10 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
   </Col>
 </Grid>
 
-<GatsbyImage alt="" image={getImage(props.localImages[3])} />
+<Figure alt="Information architecture" image={getImage(props.localImages[3])} />
 
 <Grid lg="2">
-  <Col align="flex-end">
+  <Col m="8px 0" align="flex-end">
     <Label transparent>Workflow</Label>
   </Col>
   <Col>
@@ -180,7 +196,10 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
       Smaller components such as menus, buttons, and links are then introduced
       that eventually form a library.
     </p>
-    <GatsbyImage alt="" image={getImage(props.localImages[4])} />
+    <Figure
+      alt="Demonstrating atomic design"
+      image={getImage(props.localImages[4])}
+    />
     <h3>I build the page components, then onto content templates.</h3>
     <p>
       With a sizable component library comprising the basic elements, I proceed
@@ -196,7 +215,10 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
   </Col>
 </Grid>
 
-<GatsbyImage alt="" image={getImage(props.localImages[5])} />
+<Figure
+  alt="Final design on desktop and mobile"
+  image={getImage(props.localImages[5])}
+/>
 
 <Grid lg="2">
   <Col align="flex-end">

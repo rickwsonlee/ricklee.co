@@ -1,7 +1,10 @@
 ---
 title: Artitude
-date: "2021-12-22"
-description: "Thriving in the heart of Penang, Artitude Design Studio’s interior design practice lives by an ideology of creating functional spaces for many generations to live."
+subtitle: "Digital Presence for An Interior Design Practice"
+status: "Draft"
+date:
+  modified: "2022-01-29"
+  published: "2021-12-22"
 featuredImage:
   src: "./cover.jpg"
   alt: "Website mockup"
@@ -9,18 +12,35 @@ meta:
   website: "//designsomething.co"
   contribution: ["Web Development", "UX Design"]
   year: "2021"
+  duration:
   collaboration: [{ name: "Josie Writes Hub" }]
 embeddedImagesLocal:
   - cover.jpg
+
+description: "Thriving in the heart of Penang, Artitude Design Studio’s interior design practice lives by an ideology of creating functional spaces for many generations to live."
 ---
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-<GatsbyImage alt="" image={getImage(props.localImages[0])} />
+<Figure
+  alt="Home page (above the fold)"
+  image={getImage(props.localImages[0])}
+/>
+
+<Grid lg="2" md="1">
+  <Col></Col>
+  <Col>
+    <Display>
+      Thriving in the heart of Penang, Artitude Design Studio&apos;s interior
+      design practice lives by an ideology of creating functional spaces for
+      many generations to live.
+    </Display>
+  </Col>
+</Grid>
 
 <Grid lg="2" md="1">
   <Col align="flex-end">
-    <Label transparent>Coming Soon</Label>
+    <Label transparent>Overview</Label>
   </Col>
   <Col>
     <p>
@@ -42,7 +62,6 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
         target="_blank"
         rel="noreferrer"
         underlined
-        external
       >
         <span>this Figma link</span>
       </AnimatedAnchor>

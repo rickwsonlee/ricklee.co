@@ -4,7 +4,7 @@ import styled, { css } from "styled-components"
 import icon from "../assets/external-link.svg"
 
 const LinkAnimation = css`
-  span {
+  span:first-child {
     position: relative;
     margin-right: ${props => (props.external ? `.3em` : null)};
 

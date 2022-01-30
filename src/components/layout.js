@@ -42,6 +42,14 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  p {
+    margin-bottom: 1em;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
   // Typography
   ${Typography}
 `

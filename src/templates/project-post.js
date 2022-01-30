@@ -6,8 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Meta from "../components/post-meta"
 import { Section, Grid, Col } from "../components/grid"
-import { Subhead } from "../typography"
-import { Button } from "../components/button"
+import { List } from "../components/list"
+import { Display, Label } from "../typography"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.mdx
@@ -21,32 +21,30 @@ const BlogPostTemplate = ({ data, location }) => {
       />
       <Section
         as="article"
-        p="5rem 2rem"
-        gap="5rem"
+        p="5rem 3rem"
+        gap="3rem"
         itemScope
         itemType="http://schema.org/Article"
       >
         <Grid as="header" lg="2" md="1">
-          <Col gap="2rem">
-            <Section>
-              <h1 itemProp="headline">{post.frontmatter.title}</h1>
-              {post.frontmatter.meta.website && (
-                <Button
-                  href={post.frontmatter.meta.website}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Visit Website
-                </Button>
-              )}
-            </Section>
-            <Meta post={post} />
+          <Col span="2">
+            <h1 itemProp="headline">{post.frontmatter.title}</h1>
           </Col>
           <Col>
-            <Subhead>{post.frontmatter.description}</Subhead>
+            <List nostyle gap="4px">
+              {post.frontmatter.meta.contribution.map(contribution => (
+                <li>
+                  <Label transparent>{contribution}</Label>
+                </li>
+              ))}
+            </List>
           </Col>
+          <Col>
+            <Meta post={post} />
+          </Col>
+          <Display>{post.frontmatter.subtitle}</Display>
         </Grid>
-        <Section itemProp="articleBody" gap="4rem">
+        <Section itemProp="articleBody" gap="3rem">
           <MDXRenderer localImages={post.frontmatter.embeddedImagesLocal}>
             {post.body}
           </MDXRenderer>
@@ -68,12 +66,10 @@ export const pageQuery = graphql`
     }
     mdx(id: { eq: $id }) {
       id
-      excerpt(pruneLength: 160)
       body
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        description
+        subtitle
         meta {
           website
           contribution

@@ -7,19 +7,9 @@ import { Label } from "../typography"
 
 const Meta = ({ post }) => {
   return (
-    <Grid lg="3" md="2" sm="2">
-      <Section>
-        <Label as="h4" transparent>
-          Contribution
-        </Label>
-        <List nostyle>
-          {post.frontmatter.meta.contribution.map(contribution => (
-            <li>{contribution}</li>
-          ))}
-        </List>
-      </Section>
+    <Grid lg="2" sm="2" gap="2rem">
       {post.frontmatter.meta.collaboration.length > 0 && (
-        <Section>
+        <Section gap="8px">
           <Label as="h4" transparent>
             Collaboration
           </Label>
@@ -33,7 +23,6 @@ const Meta = ({ post }) => {
                       target="_blank"
                       rel="noreferrer"
                       underlined
-                      external
                     >
                       <span>{collaboration.name}</span>
                     </AnimatedAnchor>
@@ -51,14 +40,14 @@ const Meta = ({ post }) => {
         </Section>
       )}
       {post.frontmatter.meta.duration && (
-        <Section>
+        <Section gap="8px">
           <Label as="h4" transparent>
             Duration
           </Label>
           <p>{post.frontmatter.meta.duration}</p>
         </Section>
       )}
-      <Section>
+      <Section gap="8px">
         <Label as="h4" transparent>
           Year
         </Label>

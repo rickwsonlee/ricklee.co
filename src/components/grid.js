@@ -2,12 +2,13 @@ import styled, { css } from "styled-components"
 
 export const Section = styled.div`
   width: 100%;
+  margin: ${props => props.m};
   padding: ${props => props.p};
   display: flex;
   flex-direction: ${props =>
     props.direction ? `${props.direction}` : `column`};
-  gap: ${props => (props.gap ? `${props.gap}` : `1rem`)};
-  align-items: flex-start;
+  gap: ${props => (props.gap ? `${props.gap}` : `8px`)};
+  align-items: ${props => (props.align ? `${props.align}` : null)};
 `
 
 export const Grid = styled.div`

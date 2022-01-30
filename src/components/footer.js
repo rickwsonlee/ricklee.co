@@ -1,5 +1,7 @@
 import * as React from "react"
 
+import BacktoTop from "./back-to-top"
+
 import { Section, Grid, Col } from "./grid"
 import { AnimatedLink, AnimatedAnchor } from "./link"
 
@@ -31,9 +33,9 @@ const Footer = () => {
             </AnimatedAnchor>
           </div>
         </Col>
-        <Col>
+        <Col align="flex-end">
           <AnimatedLink to="#top">
-            <span>Back to Top</span>
+            <BacktoTop />
           </AnimatedLink>
         </Col>
       </Grid>

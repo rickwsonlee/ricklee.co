@@ -2,12 +2,7 @@
 
 My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
-## Adding Next
-
-- [ ] Dynamic background for posts
-- [x] Blog for portfolio content
-- [x] Fix to good ol' FOUT
-- [x] Look into disabling the [displayName](https://styled-components.com/docs/tooling#better-debugging) option
+<!-- ## Adding Next -->
 
 ## Libraries
 
@@ -20,10 +15,10 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 ## Font
 
-[Archivo](https://www.omnibus-type.com/fonts/archivo) by Ominibus-Type
+[Inter](https://rsms.me/inter/) by Rasmus Andersson
 
 ## Author
 
-Rick Lee is a Malaysia-based product (UI/UX) designer with a passion and curiosity for design and technology. He currently lives in Kuala Lumpur and is available for hire.
+Rick Lee is a Product (UI/UX) Designer based in Malaysia.
 
-[Email](mailto:hello@ricklee.co) / [LinkedIn](https://www.linkedin.com/in/rickwsonlee)
+[Email](mailto:rick@ricklee.co) / [LinkedIn](https://www.linkedin.com/in/rickwsonlee)

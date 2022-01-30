@@ -1,64 +1,34 @@
 import * as React from "react"
-import styled from "styled-components"
 
 import { Section, Grid, Col } from "../components/grid"
 import { AnimatedLink, AnimatedAnchor } from "./link"
-import { Button } from "./button"
-
-const Heading = styled.h1`
-  font-size: 1.2rem;
-`
+import { Display } from "../typography"
 
 const Header = ({ location }) => {
   let header
 
   if (location.pathname === "/") {
     header = (
-      <Col>
-        <Heading>
-          Rick Lee is a Malaysia-based product &#40;UI&#47;UX&#41; designer with
-          a passion and curiosity for design and technology. Born in Penang, he
-          currently lives in Kuala Lumpur and is{" "}
-          <AnimatedAnchor
-            href="//www.linkedin.com/in/rickwsonlee"
-            target="_blank"
-            rel="noopener"
-            underlined
-            external
-          >
-            <span>available for hire</span>
-          </AnimatedAnchor>
-          .
-        </Heading>
-        <Button
-          href="https://1drv.ms/b/s!AjrODPFRPE3lgesDwA1paB6J727ksQ?e=PuhFro"
-          target="_blank"
-          rel="noopener"
-        >
-          View CV
-        </Button>
-      </Col>
+      <Display as="h1">
+        <span>Rick Lee</span>
+      </Display>
     )
   } else {
-    header = (
-      <>
-        <Col>
-          <AnimatedLink to="/">
-            <span>Rick Lee</span>
-          </AnimatedLink>
-        </Col>
-        <Col>
-          <AnimatedLink to="/#archive">
-            <span>Back to Archive</span>
-          </AnimatedLink>
-        </Col>
-      </>
-    )
+    header = <Display as="span">Back to Archive</Display>
   }
 
   return (
-    <Section as="header" id="top" p="2rem">
-      <Grid lg="2">{header}</Grid>
+    <Section as="header" id="top" p="4rem 3rem">
+      <Grid lg="2" sm="2">
+        <Col>
+          <AnimatedLink to="/">{header}</AnimatedLink>
+        </Col>
+        <Col align="flex-end">
+          <AnimatedAnchor href="mailto:rick@ricklee.co">
+            <Display as="span">Email</Display>
+          </AnimatedAnchor>
+        </Col>
+      </Grid>
     </Section>
   )
 }

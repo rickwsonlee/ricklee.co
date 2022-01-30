@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.text};
     background: ${({ theme }) => theme.body};
-    font-family: ${({ theme }) => theme.font.static};
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 1.3;
     
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @supports (font-variation-settings: normal) {
-      font-family: ${({ theme }) => theme.font.variable};
+      font-family: "InterVariable", sans-serif;
       font-variation-settings: "wght" 450;
     }
   }

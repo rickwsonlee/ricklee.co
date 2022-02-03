@@ -24,7 +24,9 @@ const IndexPage = ({ data, location }) => {
       <Section contained m="5rem 0">
         <Grid lg="2" gap="2rem 3rem">
           <Col>
-            <HiddenText as="h2">Info</HiddenText>
+            <HiddenText as="h2" hide_all>
+              Info
+            </HiddenText>
             <Grid lg="1" md="1" gap="4rem" sticky>
               <div>
                 <Display>
@@ -95,7 +97,9 @@ const IndexPage = ({ data, location }) => {
           </Col>
           <Col gap="4rem">
             <Section gap="2rem">
-              <h2 id="archive">Archive</h2>
+              <HiddenText as="h2" id="archive" hide_md>
+                Archive
+              </HiddenText>
               <List nostyle gap="2rem">
                 {data.allMdx.nodes.map(post => {
                   return <PostCard post={post} />

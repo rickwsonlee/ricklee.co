@@ -30,12 +30,29 @@ export const Typography = css`
 `
 
 export const HiddenText = styled.p`
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  ${props =>
+    props.hide_all &&
+    css`
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    `}
+
+  ${props =>
+    props.hide_md &&
+    css`
+      @media (min-width: 43.75rem) {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+    `}
 `
 
 export const Display = styled.p`

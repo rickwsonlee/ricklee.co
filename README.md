@@ -11,7 +11,7 @@ My personal website. Built with [Gatsby](https://www.gatsbyjs.com).
 
 ## Figma
 
-[Link](https://www.figma.com/file/y9dBzF27MZuOGgKbXDJDbF/ricklee.co?node-id=20%3A106)
+[Link](https://www.figma.com/file/y9dBzF27MZuOGgKbXDJDbF/Rick-Lee?node-id=409%3A441)
 
 ## Font
 

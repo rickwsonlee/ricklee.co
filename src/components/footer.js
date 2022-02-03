@@ -14,6 +14,7 @@ const Footer = () => {
           <Display>© {new Date().getFullYear()}</Display>
         </Col>
         <Col align="flex-end" inherit="align">
+          <AnimatedLink to="#top" aria-label="Back to top">
             <BacktoTop />
           </AnimatedLink>
         </Col>

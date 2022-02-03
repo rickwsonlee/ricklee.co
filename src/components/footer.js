@@ -8,13 +8,12 @@ import { Display } from "../typography"
 
 const Footer = () => {
   return (
-    <Section as="footer" p="4rem 3rem">
+    <Section as="footer" contained m="4rem 0">
       <Grid lg="2" sm="2">
         <Col>
           <Display>© {new Date().getFullYear()}</Display>
         </Col>
-        <Col align="flex-end">
-          <AnimatedLink to="#top">
+        <Col align="flex-end" inherit="align">
             <BacktoTop />
           </AnimatedLink>
         </Col>

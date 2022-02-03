@@ -21,7 +21,8 @@ const BlogPostTemplate = ({ data, location }) => {
       />
       <Section
         as="article"
-        p="5rem 3rem"
+        contained
+        m="5rem 0"
         gap="3rem"
         itemScope
         itemType="http://schema.org/Article"

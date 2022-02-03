@@ -21,7 +21,7 @@ const IndexPage = ({ data, location }) => {
       <Helmet titleTemplate="">
         <title>{`${siteTitle} — ${siteDescription}`}</title>
       </Helmet>
-      <Section p="5rem 3rem">
+      <Section contained m="5rem 0">
         <Grid lg="2" gap="2rem 3rem">
           <Col>
             <HiddenText as="h2">Info</HiddenText>

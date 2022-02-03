@@ -18,12 +18,12 @@ const Header = ({ location }) => {
   }
 
   return (
-    <Section as="header" id="top" p="4rem 3rem">
+    <Section as="header" id="top" contained m="4rem 0">
       <Grid lg="2" sm="2">
         <Col>
           <AnimatedLink to="/">{header}</AnimatedLink>
         </Col>
-        <Col align="flex-end">
+        <Col align="flex-end" inherit="align">
           <AnimatedAnchor href="mailto:rick@ricklee.co">
             <Display as="span">Email</Display>
           </AnimatedAnchor>

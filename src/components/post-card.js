@@ -12,7 +12,7 @@ const FeaturedImage = styled(GatsbyImage)`
 
 const Article = styled.article`
   & h3 {
-    display: inline-block;
+    display: inline;
     margin-right: 8px;
   }
 `

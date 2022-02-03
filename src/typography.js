@@ -56,12 +56,12 @@ export const HiddenText = styled.p`
 `
 
 export const Display = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: -0.02em;
 
   @supports (font-variation-settings: normal) {
-    font-variation-settings: "wght" 500;
+    font-variation-settings: "wght" 450;
   }
 `
 

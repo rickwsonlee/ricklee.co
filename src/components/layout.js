@@ -39,6 +39,16 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  ::moz-selection {
+    color: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.text};
+  }
+
+  ::selection {
+    color: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.text};
+  }
+
   p {
     margin-bottom: 1em;
 

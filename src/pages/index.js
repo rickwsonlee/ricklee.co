@@ -60,8 +60,8 @@ const IndexPage = ({ data, location }) => {
                   .
                 </Display>
                 <Display>
-                  I nerd out on random things on a daily basis but hey, gotta do
-                  the research.
+                  I nerd out on random things on a daily basis and it has been
+                  watches lately.
                 </Display>
               </div>
               <List nostyle gap="4px">
@@ -106,17 +106,14 @@ const IndexPage = ({ data, location }) => {
                 })}
               </List>
             </Section>
-            <Section gap="2rem">
+            {/* <Section gap="2rem">
               <h2>Working Drafts</h2>
               <List nostyle gap="2rem">
                 {data.draft.nodes.map(post => {
                   return <PostCard post={post} />
                 })}
               </List>
-              {/* <Label size="12px" transparent>
-                The behind-the-scenes. Embracing the work in progress.
-              </Label> */}
-            </Section>
+            </Section> */}
           </Col>
         </Grid>
       </Section>

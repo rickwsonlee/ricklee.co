@@ -1,0 +1,252 @@
+---
+title: OpenCampus
+subtitle: Designing a job searching experience for new graduates
+status: "Published"
+date:
+  modified: ""
+  published: "2022-03-01"
+featuredImage:
+  src: "./oc_cover.jpg"
+  alt: "App mockups"
+meta:
+  website:
+  contribution: ["UX Design", "UX Research"]
+  year: "2022"
+  duration: "January to February"
+  collaboration: []
+embeddedImagesLocal:
+  - oc_cover.jpg
+  - oc_wireframe.jpg
+  - oc_mockup-1.jpg
+  - oc_mockup-2.jpg
+  - oc_final-design.jpg
+
+description: "Design a job searching experience for new college graduates to match with the right job"
+---
+
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+<Figure alt="Preview of mockups" image={getImage(props.localImages[0])} />
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Overview</Label>
+  </Col>
+  <Col>
+    <p>
+      OpenCampus is a job portal app for new college graduates that matches
+      candidates with jobs/companies based on their job profile.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Role</Label>
+  </Col>
+  <Col>
+    <p>
+      As a UX designer and researcher, my responsibilities consist of conducting
+      interviews &amp; usability studies, paper and digital wireframing, low-
+      and high-fidelity prototyping.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>User Research</Label>
+  </Col>
+  <Col>
+    <p>
+      The primary user goal that has been identified from the research is that
+      candidates would like to know how to better prepare themselves to increase
+      their chances of landing the right job that would meet their expectations.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Persona</Label>
+  </Col>
+  <Col>
+    <h2>Meet Mia</h2>
+    <p>
+      Mia is a 24F, living in the capital city of Malaysia, KL. She is soon
+      graduating from college and will be entering the job market.
+    </p>
+    <p>Goal: Land an entry-level job that meet her expectations.</p>
+    <p>
+      Frustration: Uncertain of where to begin, Abundance of job portal
+      platforms
+    </p>
+    <h3>Problem Statement</h3>
+    <p>
+      Mia is a soon-to-be graduate who needs an reliable method or tool for job
+      searching because she is uncertain of where to begin.
+    </p>
+    <p>
+      With a well-defined problem and persone, I then proceed to create the
+      wireframe.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2" gap="2rem">
+  <Col align="flex-end">
+    <Label transparent>Wirefames</Label>
+  </Col>
+  <Col>
+    <h2>Digital</h2>
+    <p>
+      The initial design focuses on addressing the user needs with personalised
+      content, i.e. view job matches, new listings, saved/applied jobs.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure alt="Laying out content" image={getImage(props.localImages[1])} />
+  </Col>
+  <Col>
+    <h3>Low-Fidelity Prototype</h3>
+    <p>
+      The low-fidelity prototype demonstrates the flow from signing up and
+      onboarding to exploring listings and applying a job.
+    </p>
+    <Button
+      href="https://www.figma.com/proto/FrDCk3Bf2Rga7DQzeOWW17/OpenCampus_Low-Fi?page-id=76%3A2921&node-id=76%3A2922&viewport=267%2C48%2C0.13&scaling=scale-down&starting-point-node-id=76%3A2922"
+      target="_blank"
+      rel="noopener"
+    >
+      View Prototype on Figma
+    </Button>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Usability Studies</Label>
+  </Col>
+  <Col>
+    <p>
+      I conducted an unmoderated usability studies with the low-fidelity
+      prototype and these are the insights uncovered from the usability study:
+    </p>
+    <List gap="8px" as="ol">
+      <li>Users want an efficient way to set up their profile,</li>
+      <li>Users want to explore new listings quicker,</li>
+      <li>
+        Users want to explore as many listings as possible while navigating
+        through them.
+      </li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Refinements</Label>
+  </Col>
+  <Col>
+    <h2>Addressing Insights</h2>
+    <p>
+      The onboarding form provides input suggestions based of their previous
+      information from the last step (in this case, job titles relevant to
+      user&apos;s education), while allowing manual input.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure
+      alt="Providing input suggestions"
+      image={getImage(props.localImages[2])}
+    />
+  </Col>
+  <Col></Col>
+  <Col>
+    <p>
+      Search query suggestions has been added to speed up the searching process
+      and minimize manual input.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure
+      alt="Adding search query suggestions"
+      image={getImage(props.localImages[3])}
+    />
+  </Col>
+</Grid>
+
+<Grid lg="2" gap="2rem">
+  <Col align="flex-end">
+    <Label transparent>Mockups</Label>
+  </Col>
+  <Col>
+    <h2>Final Design</h2>
+  </Col>
+  <Col span="2">
+    <Figure alt="Final design" image={getImage(props.localImages[4])} />
+  </Col>
+  <Col></Col>
+  <Col>
+    <h3>High-Fidelity Prototype</h3>
+    <p>
+      The high-fidelity prototype introduces visual design elements and design
+      changes from the usability study.
+    </p>
+    <Button
+      href="https://www.figma.com/proto/UCLNymIMt8O63G4w9Inrxp/OpenCampus?page-id=76%3A2921&node-id=76%3A2922&viewport=267%2C48%2C0.13&scaling=scale-down&starting-point-node-id=76%3A2922"
+      target="_blank"
+      rel="noopener"
+    >
+      View Prototype on Figma
+    </Button>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Accessibility</Label>
+  </Col>
+  <Col>
+    <p>
+      I interacted with prototypes on an actual device using the Figma app to
+      test for real-world usability. With the test I managed to improve and
+      optimise the touch targets on the final prototype.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Final Thoughts</Label>
+  </Col>
+  <Col>
+    <h2>Final Thoughts</h2>
+    <h3>Impact</h3>
+    <p>
+      OpenCampus introduces various improvements to a job searching flow, while
+      empowering the candidates.
+    </p>
+    <h3>What I Learned</h3>
+    <p>
+      Inputting information is tedious. When possible, present options. (Human
+      Interface Guidelines)
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col align="flex-end">
+    <Label transparent>Next Steps</Label>
+  </Col>
+  <Col>
+    <List gap="8px">
+      <li>Improve the browsing/exploring experience.</li>
+      <li>
+        To study problem(s) encountered by specific group of people, primarily
+        the disabled.
+      </li>
+      <li>Collect feedback to determine any new area of need.</li>
+    </List>
+  </Col>
+</Grid>

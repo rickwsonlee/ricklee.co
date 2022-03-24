@@ -2,7 +2,8 @@ import styled, { css } from "styled-components"
 
 export const Typography = css`
   h1,
-  h2 {
+  h2,
+  h3 {
     font-weight: 600;
     letter-spacing: -0.02em;
 
@@ -21,11 +22,6 @@ export const Typography = css`
 
   h3 {
     font-size: 1.25rem;
-    font-weight: 500;
-
-    @supports (font-variation-settings: normal) {
-      font-variation-settings: "wght" 500;
-    }
   }
 `
 

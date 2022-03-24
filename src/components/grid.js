@@ -35,6 +35,7 @@ export const Grid = styled.div`
     `}
 
   @media (min-width: 43.75rem) {
+    direction: ${props => (props.rtl ? `rtl` : null)};
     grid-template-columns: ${props =>
       props.md ? `repeat(${props.md}, 1fr)` : `repeat(2, 1fr)`};
   }
@@ -50,6 +51,7 @@ export const Col = styled(Section)`
   grid-column: 1fr;
 
   @media (min-width: 43.75rem) {
+    direction: ltr;
     grid-column: ${props => (props.span ? `span ${props.span}` : null)};
   }
 `

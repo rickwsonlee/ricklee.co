@@ -7,7 +7,11 @@ export const List = styled.ul`
   margin-bottom: 1em;
   padding-left: ${props => (props.nostyle ? `0` : `2rem`)};
 
+  li > h3 {
+    margin-bottom: 0.5em;
+  }
+
   li:not(:last-child) {
-    margin-bottom: ${props => (props.gap ? `${props.gap}` : "8px")};
+    margin-bottom: ${props => (props.gap ? `${props.gap}` : "16px")};
   }
 `

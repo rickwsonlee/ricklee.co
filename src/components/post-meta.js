@@ -13,7 +13,7 @@ const Meta = ({ post }) => {
           <Label as="h4" transparent>
             Collaboration
           </Label>
-          <List nostyle>
+          <List nostyle gap="8px">
             {post.frontmatter.meta.collaboration.map(collaboration => {
               if (collaboration.url) {
                 return (

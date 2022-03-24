@@ -1,0 +1,606 @@
+---
+title: Virtue
+subtitle: Designing a bank account opening flow
+status: "Published"
+date:
+  modified: ""
+  published: "2022-02-24"
+featuredImage:
+  src: "./virtue_cover.jpg"
+  alt: "App mockups"
+meta:
+  website:
+  contribution: ["UX Design", "UX Research"]
+  year: "2022"
+  duration: "January to February"
+  collaboration: []
+embeddedImagesLocal:
+  - virtue_cover.jpg
+  - virtue_user-journey-map.jpg
+  - maybank-application-form.jpg
+  - virtue_information-architecture.jpg
+  - virtue_sign-on-flow-chart.jpg
+  - virtue_sign-on-flow.jpg
+  - virtue_identity-verification-flow.jpg
+  - virtue_product-browsing.jpg
+  - virtue_app-overview.jpg
+  - virtue_navigation-tab.jpg
+  - virtue_progress-indicator.jpg
+  - virtue_dynamic-home-screen.jpg
+  - virtue_color.jpg
+  - virtue_typography.jpg
+  - virtue_logotype.jpg
+  - virtue_components.jpg
+  - virtue_input-fields.jpg
+  - virtue_final-design.jpg
+
+description: "Design an efficient flow to set up a personal bank account"
+---
+
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+
+<Figure alt="Preview of mockups" image={getImage(props.localImages[0])} />
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Problem</Label>
+  </Col>
+  <Col>
+    <p>
+      Opening a bank account is typically done over the counter and the approach
+      remains the same for the longest time.
+    </p>
+    <p>
+      The process by most conventional banks requires customers to be present at
+      one of their branches, creating inconveniences that Virtue is set to
+      address with an online approach.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Emphatise</Label>
+  </Col>
+  <Col>
+    <h2>Understand the Users</h2>
+    <p>
+      I asked around in my circle of friends about their experience opening
+      their first bank account. People I talked to are balanced in gender and
+      aged between 20 to 27. To my surprise, I discovered that our experiences
+      are relatively similar.
+    </p>
+    <List>
+      <li>Most of them got their first account when they were in college.</li>
+      <li>
+        They recalled going through the typical process of applying at the bank
+        branch.
+      </li>
+      <li>The whole process took them about half their day.</li>
+      <li>
+        They went with the bank they thought at that time was the most
+        convenient to them in terms of ATM and branch availability.
+      </li>
+      <li>
+        Half of them switched to another bank several years later when they
+        entered the workforce.
+      </li>
+    </List>
+    <p>
+      With the insights that I have gathered from their personal experience, I
+      created the following persona.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Persona</Label>
+  </Col>
+  <Col>
+    <h2>Meet Mia</h2>
+    <p>
+      Mia (21F) has recently moved to another city for college. As a first-year
+      student, she lives in student accommodation and spends most of her time on
+      campus.
+    </p>
+    <h3>Goal</h3>
+    <p>
+      Mia needs a bank account to manage her money and access it later to pay
+      for her daily needs.
+    </p>
+    <h3>Frustration</h3>
+    <p>
+      Mia finds it inconvenient to visit the bank during the day as she could
+      not find the appropriate slot of time.
+    </p>
+  </Col>
+  <Col>
+    <Display>
+      &ldquo;As a busy college student, I want to set up a bank account at any
+      time and anywhere so that I can use it immediately.&rdquo;
+    </Display>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>User Journey Map</h2>
+    <p>
+      To better understand Mia&apos;s inconveniences, I mapped out her user
+      journey with the help of some interviewees.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure alt="User journey map" image={getImage(props.localImages[1])} />
+  </Col>
+  <Col>
+    <p>
+      A closer look reveals an inefficient process typically results in hours of
+      waiting, e.g., on a commute to the bank, in a queue and collecting the
+      card.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Define</Label>
+  </Col>
+  <Col>
+    <p>
+      I analysed my findings and defined the following pain points that most
+      users had trouble with.
+    </p>
+    <h2>Pain Points</h2>
+    <List>
+      <li>No online account opening service.</li>
+      <li>
+        The inconvenience of visiting the bank during operation hours which
+        requires planning ahead.
+      </li>
+      <li>
+        A wide range of providers and products lead to{" "}
+        <AnimatedAnchor
+          href="//en.wikipedia.org/wiki/Consumer_confusion"
+          target="_blank"
+          rel="noopener"
+        >
+          consumer confusion
+        </AnimatedAnchor>
+        .
+      </li>
+    </List>
+  </Col>
+  <Col>
+    <Display>
+      Mia is a busy college student who needs to open a bank account
+      remotely/online because she could not find the time to visit the bank
+      during the day.
+    </Display>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Ideate</Label>
+  </Col>
+  <Col>
+    <p>
+      At this point, I had a rough idea of the solution that I am designing,
+      which I believe to be an app for customers to open a bank account online.
+      An online service would address the inconvenience of visiting the bank,
+      essentially saving customers&apos; time and money.
+    </p>
+    <p>
+      I revisited the user journey map and came up with some ideas that could
+      reduce the waiting time and improve the overall experience.
+    </p>
+    <List>
+      <li>
+        <strong>Product recommendation</strong> based on the user&apos;s profile
+        saves users from looking into irrelevant options.
+      </li>
+      <li>
+        <strong>Online application</strong> to save both parties time filling
+        out and processing paper forms. Electronic forms also minimise errors
+        with input validation features.
+      </li>
+      <li>
+        <strong>Online card activation</strong> provides an alternative to
+        physical activation over an ATM.
+      </li>
+      <li>
+        <strong>Appointment booking</strong> creates a seamless customer
+        experience resulting in increased customer satisfaction and loyalty.
+      </li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Competitive Audit</h2>
+    <p>
+      I evaluated the process of the two largest national banks in Malaysia,
+      Maybank and CIMB Bank, based on the following categories.
+    </p>
+    <List nostyle>
+      <li>
+        <h3>Feature</h3>
+        <p>
+          Maybank accepts online applications via web form; however, they only
+          get processed over the counter.
+        </p>
+        <p>
+          CIMB Bank has a separate mobile app called CIMB Apply for online
+          account opening. However, the service only applies to their digital
+          banking product but excludes the rest of their standard products,
+          joint and junior account.
+        </p>
+      </li>
+      <li>
+        <h3>Offerings</h3>
+        <p>
+          Both offer on average 14 products, most of which are nearly identical
+          in terms of features with only noticeable differences such as age
+          requirements, card designs, and payment processors.
+        </p>
+      </li>
+      <li>
+        <h3>Experience</h3>
+        <p>
+          There is not much to talk about Maybank, except I cannot help but
+          notice how long the application form is.
+        </p>
+        <Figure
+          alt="Maybank's online application form"
+          image={getImage(props.localImages[2])}
+        />
+        <p>
+          The reviews of the CIMB Apply app reveal various issues affecting more
+          than hundreds of users, which many deemed the app unusable.
+        </p>
+        <p>
+          As one would expect, the app is rated poorly, with an average star
+          rating of 1.5 out of 5.0 on the iOS App Store and Google Play Store.
+        </p>
+      </li>
+    </List>
+    <h3>Gaps</h3>
+    <List>
+      <li>The account opening process is not fully online.</li>
+      <li>Unreliable and incomplete services.</li>
+      <li>Products lack differentiating features.</li>
+      <li>Poor product browsing experience.</li>
+    </List>
+    <p>
+      I took note of these shortcomings of the existing services and ended with
+      more ideas, which is generally a good thing. I then proceeded to
+      prioritise the ideas with some goals.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Goals</h2>
+    <p>My primary goal is to design a fully online account opening flow.</p>
+    <p>Some design goals are:</p>
+    <List>
+      <li>To visualise the electronic verification process,</li>
+      <li>To improve the product browsing experience,</li>
+      <li>To design an interactive form experience.e</li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Information Architecture</h2>
+    <p>
+      I decided that the navigation be sequential to resemble the series of
+      actions in the user journey.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure
+      alt="Information architecture"
+      image={getImage(props.localImages[3])}
+    />
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Wireframe</Label>
+  </Col>
+  <Col>
+    <h2>Digital</h2>
+    <h3>Designing the signing on flow</h3>
+    <p>
+      I introduced{" "}
+      <AnimatedAnchor
+        href="//en.wikipedia.org/wiki/Single_sign-on"
+        target="_blank"
+        rel="noopener"
+      >
+        single sign-on (SSO)
+      </AnimatedAnchor>{" "}
+      to streamline the onboarding flow, given that each application is unique
+      and processed only once.
+    </p>
+    <Figure
+      alt="Demonstrating signing on flow"
+      image={getImage(props.localImages[4])}
+    />
+    <p>The sign-on flow involves the following steps of verification.</p>
+    <List>
+      <li>
+        <strong>Enter a phone number</strong> to check for an existing
+        application.
+      </li>
+      <li>
+        <strong>Enter age</strong> to check the user&apos;s eligibility and
+        recommend relevant products.
+      </li>
+      <li>
+        <strong>Enter the one-time password (OTP)</strong> for authentication.
+      </li>
+    </List>
+    <Figure alt="Signing on flow" image={getImage(props.localImages[5])} />
+    <h3>Visualising the identity verification flow</h3>
+    <p>
+      To verify the user&apos;s identity, users would take a picture of their
+      primary ID document and a self-portrait for identification.
+    </p>
+    <p>
+      I designed the system to have the ability to interpret and extract the
+      information from the ID document accurately. If feasible, it would save
+      users from entering them later.
+    </p>
+    <Figure
+      alt="Verifying identity flow"
+      image={getImage(props.localImages[6])}
+    />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Low-Fidelity Prototype</h2>
+    <Button
+      href="https://www.figma.com/proto/Z8JyXCrz9BW8LBByX4WSjO/Virtue?node-id=0%3A1&viewport=241%2C48%2C0.06&scaling=min-zoom&starting-point-node-id=284%3A3475"
+      target="_blank"
+      rel="noopener"
+    >
+      View Prototype on Figma
+    </Button>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Test</Label>
+  </Col>
+  <Col>
+    <h2>Usability Study</h2>
+    {/* <p>I conducted a usability study.</p> */}
+    <h3>Insights</h3>
+    <List>
+      <li>Users want to compare products.</li>
+      <li>Users want to be informed early on.</li>
+      <li>Users want intuitive navigation.</li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Design Changes &amp; Refinements</h2>
+    <h3>Presented products in a scrollable carousel.</h3>
+    <p>
+      Browsing from a list can be distracting when it gets long. A carousel
+      helps users distinguish differences as they move through the products. The
+      new layout creates more space for information which was not possible with
+      a list.
+    </p>
+    <Figure
+      alt="New product browsing experience"
+      image={getImage(props.localImages[7])}
+    />
+    <h3>
+      Added a toggle to reveal the necessary information about the application
+      on the launch screen
+    </h3>
+    <p>It gives users a quick overview before committing to the user flow.</p>
+    <Figure alt="App overview modal" image={getImage(props.localImages[8])} />
+    <h3>Created the navigation tab</h3>
+    <p>
+      Most users were seen struggling to navigate the flow back and forth due to
+      the inconsistent placement of the navigational controls.
+    </p>
+    <p>
+      To adddress the issue, a navigation tab with a back button is added on
+      most screens. In addition, the controls used for advancement, i.e. the
+      'Procced' button, is fixed at the bottom of the screen.
+    </p>
+    <p>Changes made to address the issue:</p>
+    <List>
+      <li>A navigation tab with a back button is present on most screens.</li>
+      <li>
+        The control used for advancement, i.e. the 'Proceed' button, is fixed at
+        the bottom of the screen.
+      </li>
+    </List>
+    <Figure alt="New app navigation" image={getImage(props.localImages[9])} />
+    <h3>Added a progress indicator</h3>
+    <p>
+      It provides users with a sense of progress and motivates them to complete
+      the flow.
+    </p>
+    <Figure alt="Progress indicator" image={getImage(props.localImages[10])} />
+    <h3>Dynamic home screen</h3>
+    <p>
+      The home screen is where users start the main flow and return to continue
+      or check their application. It should feel personal.
+    </p>
+    <p>
+      The content of the header adapts based on the user&apos;s applications
+      status to welcome, encourage progress and celebrate success.
+    </p>
+    <Figure
+      alt="Dynamic home screen header"
+      image={getImage(props.localImages[11])}
+    />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Visual Design</h2>
+    <p>
+      The visual identity for Virtue seeks to appeal to the younger audience. I
+      began exploring the name Virtue. It appears to be a concept traces back to
+      the Greco-Roman period, which is the theme the identity is based off.
+    </p>
+  </Col>
+  <Col></Col>
+  <Col>
+    <Figure alt="Color system" image={getImage(props.localImages[12])} />
+  </Col>
+  <Col>
+    <Figure alt="Typography system" image={getImage(props.localImages[13])} />
+  </Col>
+  <Col>
+    <p>
+      Symbolic objects from that period inspire the base colour palette, i.e.
+      green from laurel wreath and ivory from Greek/Roman columns.
+    </p>
+    <p>
+      As for typography, I paired{" "}
+      <AnimatedAnchor
+        href="//fonts.google.com/specimen/Fahkwang"
+        target="_blank"
+        rel="noopener"
+      >
+        Fahkwang
+      </AnimatedAnchor>{" "}
+      and{" "}
+      <AnimatedAnchor
+        href="//fonts.google.com/specimen/Public+Sans"
+        target="_blank"
+        rel="noopener"
+      >
+        Public Sans
+      </AnimatedAnchor>{" "}
+      to create a balanced combination/pairing.
+    </p>
+    <p>
+      Fahkwang is effective at adding visual interest to headlines with its
+      expressive and light-hearted characteristics.
+    </p>
+    <p>
+      In an all-capital setting, spacing out the letters resembles the inscribed
+      texts on the surface of Romain columns.
+    </p>
+    <Figure
+      alt="Transformation of logotype"
+      image={getImage(props.localImages[14])}
+    />
+    <p>
+      Public Sans is legible as body text and space-saving due to its condensed
+      appearance.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Design System</h2>
+    <p>
+      The design system gradually takes shape as the design language develops
+      within the reusable components.
+    </p>
+  </Col>
+  <Col span="2">
+    <Figure
+      alt="Preview of components"
+      image={getImage(props.localImages[15])}
+    />
+  </Col>
+  <Col>
+    <p>
+      When it comes to maintaining the design system, I particularly like
+      Figma&apos;s{" "}
+      <AnimatedAnchor
+        href="//www.figma.com/best-practices/creating-and-organizing-variants/"
+        target="_blank"
+        rel="noopener"
+      >
+        Variants
+      </AnimatedAnchor>{" "}
+      feature for managing multiple variations of similar components I designed
+      for various interactive states.
+    </p>
+    {/* <Figure alt="Caption" image={getImage(props.localImages[16])} /> */}
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Final Design</h2>
+  </Col>
+  <Col span="2">
+    <Figure alt="Final design" image={getImage(props.localImages[17])} />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Hight-Fidelity Prototype</h2>
+    <Button
+      href="https://www.figma.com/proto/Z8JyXCrz9BW8LBByX4WSjO/Virtue?node-id=76%3A2921&viewport=241%2C48%2C0.15&scaling=scale-down&starting-point-node-id=368%3A6697&show-proto-sidebar=1"
+      target="_blank"
+      rel="noopener"
+    >
+      View Prototype on Figma
+    </Button>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Accessibility</h2>
+    <List>
+      <li>Checked the color contrast.</li>
+      <li>
+        Interacted with the final prototype with an actual device using the
+        Figma app.
+      </li>
+      <li>
+        Considered{" "}
+        <AnimatedAnchor
+          href="//en.wikipedia.org/wiki/Soft_ergonomics"
+          target="_blank"
+          rel="noopener"
+        >
+          soft ergonomics
+        </AnimatedAnchor>
+        .
+      </li>
+    </List>
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Final Thoughts</h2>
+    <p>
+      Examining one's experience from their perspectives helped me learn about
+      the users' general preference for convenience, which I made sure to
+      prioritise in my design process. I also learned about various concepts of
+      user behaviour and product design in the process.
+    </p>
+  </Col>
+</Grid>

@@ -60,8 +60,8 @@ const IndexPage = ({ data, location }) => {
                   .
                 </Display>
                 <Display>
-                  I nerd out on random things on a daily basis and it has been
-                  watches lately.
+                  I geek out over random stuff &mdash; primarily on the tech,
+                  history, craft, and design.
                 </Display>
               </div>
               <List nostyle gap="4px">

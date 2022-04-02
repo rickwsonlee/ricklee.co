@@ -1,12 +1,12 @@
 ---
 title: Artitude
 subtitle: "Digital Presence for An Interior Design Practice"
-status: "Draft"
+status: "Published"
 date:
   modified: "2022-01-29"
   published: "2021-12-22"
 featuredImage:
-  src: "./cover.jpg"
+  src: "./Artitude_Cover.jpg"
   alt: "Website mockup"
 meta:
   website: "//designsomething.co"
@@ -15,31 +15,27 @@ meta:
   duration:
   collaboration: [{ name: "Josie Writes Hub" }]
 embeddedImagesLocal:
-  - cover.jpg
+  - Artitude_Cover.jpg
+  - Artitude_Keywords-by-Themes.jpg
+  - Artitude_Information-Architecture.jpg
+  - Artitude_Service-Overview.jpg
+  - Artitude_CTAs.jpg
+  - Artitude_Post-Layout.jpg
+  - Artitude_TOC.jpg
+  - Artitude_Suggested-Search-Queries.jpg
+  - Artitude_Color-System.jpg
+  - Artitude_Typography-System.jpg
+  - Artitude_Final-Design.jpg
 
 description: "Thriving in the heart of Penang, Artitude Design Studio’s interior design practice lives by an ideology of creating functional spaces for many generations to live."
 ---
 
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-<Figure
-  alt="Home page (above the fold)"
-  image={getImage(props.localImages[0])}
-/>
+<Figure alt="Home page above the fold" image={getImage(props.localImages[0])} />
 
-<Grid lg="2" md="1">
-  <Col></Col>
+<Grid lg="2">
   <Col>
-    <Display>
-      Thriving in the heart of Penang, Artitude Design Studio&apos;s interior
-      design practice lives by an ideology of creating functional spaces for
-      many generations to live.
-    </Display>
-  </Col>
-</Grid>
-
-<Grid lg="2" md="1">
-  <Col align="flex-end">
     <Label transparent>Overview</Label>
   </Col>
   <Col>
@@ -52,20 +48,251 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image"
     <p>
       I was approached to develop a portfolio website as part of their ongoing
       effort to build their online presence. My tasks consist of conducting SEO
-      research, structuring content, wireframing, designing mockups, and a
+      research, structuring content, wire-framing, designing mockups, and a
       fundamental visual identity that reflects their attitudes.
     </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Discovery</Label>
+  </Col>
+  <Col>
     <p>
-      Working files can be viewed within{" "}
-      <AnimatedAnchor
-        href="//www.figma.com/file/bXx6MFGzgm8KwLAelybf41/Artitude?node-id=0%3A1"
-        target="_blank"
-        rel="noreferrer"
-        underlined
-      >
-        <span>this Figma link</span>
-      </AnimatedAnchor>
-      . The full case study is to be published.
+      We agreed that the website should be{" "}
+      <strong>
+        the primary channel for generating leads from various traffics,
+        including social media
+      </strong>
+      , and <strong>creating further interest in their business</strong> with the
+      work they showcase.
+    </p>
+    <h2>Understand the Users</h2>
+    <p>
+      ADS is known for its specialisation in high-budget residential projects.
+    </p>
+    <p>
+      Since I had never interacted with an interior designer or the user group,
+      I worked closely with ADS to gather as much information about their
+      workflow, target audience, demographic and buyer&apos;s journey.
+    </p>
+    <p>
+      I am particularly interested in their client&apos;s intentions and perhaps
+      concerns.
+    </p>
+    <List>
+      <li>
+        They value self-expression, their lifestyle and the people they share
+        the space with.
+      </li>
+      <li>Most find engaging with interior designers to be intimidating.</li>
+    </List>
+    <p>
+      These insights help inform their brand message of creating functional
+      spaces that reflect their client&apos;s personalities and lifestyles while
+      accommodating their needs and budget.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>SEO</Label>
+  </Col>
+  <Col>
+    <p>
+      I decided to take on the SEO research role, as a learning opportunity to
+      explore the topic beyond the basics. Even though SEO revolves around web
+      design, it is a different specialisation that I barely explore at that
+      point.
+    </p>
+    <p>
+      With a week to prepare, I look up video tutorials to teach myself as much
+      about the process. Tutorials specifically from Ahrefs have been a
+      tremendous help.
+    </p>
+    <h3>Strategy</h3>
+    <p>
+      My goal is to come up with a list of low-competition keywords that meet
+      search intents.
+    </p>
+    <p>
+      These keywords, also known as long-tail keywords, tend to be specific key
+      phrases with low search volume while effective at generating quality
+      traffic.
+    </p>
+  </Col>
+  <Col></Col>
+  <Col>
+    <h2>Brainstorm Keywords</h2>
+    <h3>Competitor Analysis</h3>
+    <p>
+      We decided to focus on local competition as they primarily serve the
+      Penang market. I looked up the first-page competitors on local search
+      results using the search term &apos;interior design penang&apos;.
+    </p>
+    <p>
+      I analysed their websites by navigating each and using Ahrefs&apos;s Site
+      Explorer to retrieve their SEO statistics and organic keywords.
+    </p>
+    <List>
+      <li>
+        <strong>All competitors have a portfolio</strong> with 5 to 25 projects
+        listed.
+      </li>
+      <li>
+        <strong>1 out of 5 competitors has a blog</strong>, contributing to high
+        referring domains due to backlinks.
+      </li>
+    </List>
+    <h3>Keyword Research</h3>
+    <p>
+      Using the seed keyword, interior design, I looked up search queries in
+      Malaysia using Google Trends.
+    </p>
+    <p>
+      I was able to generate a list of relevant search queries, and categorise
+      them into common themes and search intents. These categories later act as
+      taxonomies of the website to organise content for improved discovery.
+    </p>
+    <Figure
+      alt="Keywords categorised by theme"
+      image={getImage(props.localImages[1])}
+    />
+    <p>
+      I also explored some more keywords with Keyword Planner built into Google
+      Ads.
+    </p>
+    <h3>Shortlist Keywords</h3>
+    <p>
+      I then entered all potential keywords into Ahrefs&apos;s tool to analyse
+      the search volume to determine the competition.
+    </p>
+    <p>
+      I also checked selected keywords for any conflict in the definition. One
+      of which is &apos;interior designer&apos;, which results in searches on
+      job openings that helped inform their identity as an &apos;interior design
+      studio&apos; instead.
+    </p>
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Content</Label>
+  </Col>
+  <Col>
+    <p>
+      I worked with Josie Writes Hub on copywriting, and they did a fantastic
+      job.
+    </p>
+    <p>
+      We also defined set guidelines for brand communication to ensure future
+      content consistently communicates the brand messages to the target
+      audience across all platforms.
+    </p>
+    <h2>Information Architecture</h2>
+    <p>
+      I created the structure of the website to support the purposes and
+      users&apos; intents.
+    </p>
+    <Figure
+      alt="Information architecture"
+      image={getImage(props.localImages[2])}
+    />
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Design</Label>
+  </Col>
+  <Col>
+    <h3>Tailored to First-Time Customers</h3>
+    <p>
+      We learned from the discovery sessions that the majority of the clients
+      engage an interior designer for the first time.
+    </p>
+    <p>
+      Tailored content such as Process Overview and Frequently-Asked Questions
+      (FAQ) is produced to guide first-time customers through the user journey.
+    </p>
+    <Figure alt="Process overview" image={getImage(props.localImages[3])} />
+    <h3>Conversion-Focused</h3>
+    <p>
+      Variations of call-to-actions are added appropriately to create an
+      inclusive experience throughout the user journey.
+    </p>
+    <Figure alt="Call to actions" image={getImage(props.localImages[4])} />
+    <h3>Optimised for Continuity</h3>
+    <p>
+      The flow of the post content is intentionally created as such users
+      navigate through the space physically.
+    </p>
+    <Figure alt="Post layout" image={getImage(props.localImages[5])} />
+  </Col>
+</Grid>
+
+<Grid lg="2">
+  <Col>
+    <Label transparent>Refinement</Label>
+  </Col>
+  <Col>
+    <h2>Refining the Design</h2>
+    <h3>Table of Content</h3>
+    <p>
+      A floating Table of Content is added to ease users navigating through the
+      sections of the post.
+    </p>
+    <Figure alt="Table of content" image={getImage(props.localImages[6])} />
+    <h3>Search w/ Suggested Queries</h3>
+    <p>
+      The search window displays suggested search queries that match the
+      user&apos;s intents.
+    </p>
+    <Figure alt="Full page search" image={getImage(props.localImages[7])} />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Visual Design</h2>
+    <p>
+      The new visual identity reflects the characteristics of contemporary
+      design style widely present in their interior work. This particular style
+      is defined by its simplicity, subtle sophistication, neutral colour
+      scheme, and clean lines.
+    </p>
+  </Col>
+  <Col></Col>
+  <Col>
+    <Figure alt="Color system" image={getImage(props.localImages[8])} />
+  </Col>
+  <Col>
+    <Figure alt="Typography system" image={getImage(props.localImages[9])} />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Final Design</h2>
+  </Col>
+  <Col span="2">
+    <Figure alt="Final design" image={getImage(props.localImages[10])} />
+  </Col>
+</Grid>
+
+<Grid lg="2" rtl>
+  <Col>
+    <h2>Final Thoughts</h2>
+    <p>
+      The initial phases have been decisive, given that the insights that we
+      gathered had an influence on the project outcome.
+    </p>
+    <p>
+      I also had the opportunity to learn more about SEO and its processes,
+      which will be valuable knowledge for a future project.
     </p>
   </Col>
 </Grid>

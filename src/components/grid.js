@@ -25,7 +25,7 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${props =>
     props.sm ? `repeat(${props.sm}, 1fr)` : `1fr`};
-  grid-gap: ${props => (props.gap ? `${props.gap}` : `1rem 2rem`)};
+  grid-gap: ${props => (props.gap ? `${props.gap}` : `2rem`)};
 
   ${props =>
     props.sticky &&
